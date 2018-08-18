@@ -1,0 +1,64 @@
+<ion-header>
+    <!-- <ion-navbar>
+        <ion-title> DateIN <i class="fa fa-commenting-o flotRit" aria-hidden="true"></i> </ion-title>
+    </ion-navbar> -->
+    <ion-navbar hideBackButton>
+        <ion-title class="dateinTitle"> 
+        <span class="headerCancelTxt" (click)="cancelButton()"><i class="fa fa-angle-left" aria-hidden="true"></i>Back</span> 
+        <span class="alignMainHead2">Occupation</span>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="contentPading">
+    <ion-list>
+
+       <span class="posRel">
+        <ion-item class="border0">
+            <ion-label class="setingLabelTxt setingLabelTxtmargin0">Facebook Profile</ion-label>
+        </ion-item>
+        <i *ngIf="fbOccupetionList" class="fa fa-spinner ion-loading-c iconPostionCng" aria-hidden="false"></i>
+       </span>
+
+
+        <ion-list class="radioBtnMain" radio-group [(ngModel)]="fbOccupation">
+            <ion-item *ngFor="let workarry of OccupationArray;">
+                <ion-label>{{workarry.position.replace('.','')}}</ion-label>
+                <ion-radio value={{workarry.workId}} (ionSelect)="radioOccupationselect(workarry.workId,workarry.position.replace('.',''))"  checked={{workarry.ischecked}}></ion-radio>
+            </ion-item>
+
+        </ion-list>
+
+        <span class="posRel">
+        <ion-item class="border0">
+               <ion-label class="setingLabelTxt setingLabelTxtmargin0">Other Occupations</ion-label>
+        </ion-item>
+             <i *ngIf="otherOccupetionList" class="fa fa-spinner ion-loading-c iconPostionCng" aria-hidden="false"></i>
+        </span>
+           
+
+        <ion-list class="radioBtnMain" radio-group [(ngModel)]="fbOccupation">
+            <ion-item *ngFor="let workarry of OccupationArrayFromApi;">
+                <ion-label>{{workarry.position}}</ion-label>
+                <ion-radio value={{workarry.position}} (ionSelect)="radioOtherOccupationClicked(workarry)"  checked={{workarry.ischecked}}></ion-radio>
+            </ion-item>
+
+        </ion-list>
+
+
+        <!-- <ion-list class="radioBtnMain" radio-group [(ngModel)]="occupation">
+            <ion-item>
+                <ion-label>Compliance Officer</ion-label>
+                <ion-radio value="Officer" checked></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Accountant</ion-label>
+                <ion-radio value="Accountant"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Actor</ion-label>
+                <ion-radio value="Actor"></ion-radio>
+            </ion-item>
+        </ion-list> -->
+
+    </ion-list>
+</ion-content>

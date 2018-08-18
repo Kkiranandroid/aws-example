@@ -1,0 +1,126 @@
+<ion-header >
+
+  <ion-navbar hideBackButton>
+    <ion-title class="dateinTitle"> <span (click)="goBack()" class="headerCancelTxt"><i class="fa fa-angle-left" aria-hidden="true"></i>Messages</span> <span class="headerDoneTxt" (click)="presentPopover($event)"><ion-icon name="ios-more" class="moreIconAlign"></ion-icon></span> </ion-title>
+  </ion-navbar>
+    
+    <ion-list class="mainAvailables active">
+        <ion-item>
+            <ion-label>
+              <div class="matchScrollImg2" [style.background]="'url(' + userImage + ')'" (click)="viewProfile()"></div>
+                <div class="mainCoverSations">
+                  <!--   <div class="dateSec" (click)="gotoMatchmultiavailability()"><p>Mar</p><span>01</span> --><!-- <span class="noOfDates">3</span> --><!-- </div> -->
+                    <div class="dateSecSub">
+                        <h1>{{userName}}</h1>
+                        <span class="{{locationInfoColor}}">{{locationInfo}}</span>
+                        <!--<p>Friday, January 12</p>-->
+                        <p>{{matched_date}}</p>
+                    </div>
+                </div>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-header>
+
+
+<ion-content class="conteentPadding" no-bounce>
+<div class="converSationMainContent">
+  <div *ngIf="noChartFound" class="norecordsfound loading">
+          <div class="norecordsfoundMain">
+              <i class="fa fa-spinner ion-loading-c" aria-hidden="true"></i>
+          </div>
+  </div>
+
+  <div *ngIf="noConversationFound" class="norecordsfound loading">
+          <div class="norecordsfoundMain">
+              <span class="noConversationFound">No convertions</span>
+          </div>
+  </div>
+
+  <div *ngFor="let msg of conversionDetails;">
+
+      <div *ngIf="msg.who_sent_it === 'me'" class="chatBubble {{msg.position}}" ><!-- {{msg.position}} -->
+        <div class="chat-bubble">
+          <div class="message">{{msg.chat_text}}</div>
+        </div>
+      </div>
+      <p class="chatDaate" *ngIf="msg.who_sent_it === 'date'">{{msg.chat_text}}</p>
+      
+      <div *ngIf="msg.who_sent_it === 'other'" class="chatBubble {{msg.position}}"><!-- {{msg.position}} -->
+        <div class="chat-bubble">
+          <div class="message">{{msg.chat_text}}</div>
+        </div>
+      </div>
+      <!-- <p class="chatDaate ritAlign">Read Friday</p> -->
+  </div>    
+</div>
+</ion-content>
+<ion-footer class="{{footerConversation}}">
+  <ion-toolbar>
+    <ion-title><!-- <ion-icon name="ios-camera"></ion-icon> -->
+    <ion-input #input type="text" autocorrect="on" autocomplete="on" placeholder="Enter text" [(ngModel)]="sendmessage" (input)='sendTyping()' (ionFocus)="onKeyPressed()"></ion-input>
+    <ion-icon name="md-send" (click)="publish(input);" ></ion-icon></ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+<!-- User report popover code START -->
+<div [className]="reportAbuse">
+    <div class="firstTimeUserExpSub reportAbuse">
+        <div class="reportAbuseHeader">
+            Report User
+        </div>
+      <ion-list radio-group [(ngModel)]="reportSection" (change)="ionChange()" class="radioReportUser" id="scrollDiv">
+          <ion-item>
+              <ion-label>Feels like spam</ion-label>
+              <ion-radio value="cord" checked="true" (ionSelect)="ionChange('Feels like span')"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>Inappropiate photo or profile</ion-label>
+              <ion-radio value="duesenberg" (ionSelect)="ionChange('Inappropiate photo or profile')"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>Offensive online behaviour</ion-label>
+              <ion-radio value="hudson" (ionSelect)="ionChange('Offensive online behaviour')"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>Offensive offline behaviour</ion-label>
+              <ion-radio value="packard" (ionSelect)="ionChange('Offensive offline behaviour')"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>Other</ion-label>
+              <ion-radio value="studebaker" (ionSelect)="ionChange('Other')"></ion-radio>
+          </ion-item>
+          <ion-item *ngIf="reportNow" class="reportNowCls">
+              <ion-textarea [(ngModel)]="description" name="description" placeholder="Enter Description" rows="5" cols="4"></ion-textarea>
+          </ion-item>
+        </ion-list>
+        <div class="reportAbuseBtn">
+            <button ion-button (click)="reportUserButtonClicked()">Report</button>
+            <button ion-button (click)="reportAbuseClose()">Cancel</button>
+        </div>
+    </div>
+</div>
+<!-- User report popover code END-->
+
+<!-- User block popover code START -->
+<div [className]="blockChartPersonPopup">
+    <div class="firstTimeUserExpSub reportAbuse">
+        <div class="reportAbuseHeader">
+            Block {{userName}}
+        </div>
+        <div class="blockSubTitle">
+           Please provide detail on why you are blocking {{userName}}
+        </div>
+      <ion-list class="radioReportUser" id="scrollDiv">
+          <ion-item class="reportNowCls" style="margin-top: 5px;">
+              <ion-textarea [(ngModel)]="blockdescription" (input)='blockEditTextListenear($event)' name="blockdescription" placeholder="Enter Description" rows="1" cols="4"></ion-textarea>
+              <span class="clearIcon">X</span>
+          </ion-item>
+        </ion-list>
+        <div class="reportAbuseBtn">
+            <button ion-button (click)="BlockUserButtonClicked()">Block</button>
+            <button ion-button (click)="blockUserClose()">{{ClearCancel}}</button>
+        </div>
+    </div>
+</div>
+<!-- User block popover code END-->

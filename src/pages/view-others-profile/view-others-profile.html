@@ -1,0 +1,62 @@
+<!--
+  Generated template for the ViewOthersProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title class="dateinTitle">
+      <span class="headerCancelTxt" (click)="closeIcon()"><i class="fa fa-angle-left" aria-hidden="true"></i>Back</span>
+      <img class="externalImges" src="assets/icon/user/user_blue.png" (click)="closeIcon()">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+
+  <div *ngIf="isCardsLoading" class="norecordsfound2 localClass">
+    <div class="norecordsfoundMain2 ">
+      <div class="norecordsfoundSub2">
+        <div class="noAnimate "><!-- addAnimate -->
+          <img class="cardLoading" src="assets/imgs/loading_2.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="sliderViewFixed">
+    <div class="sliderViewPageMain">
+      <ion-slides pager class="sliderViewPage">
+        <div *ngFor="let image of profileImages">
+          <ion-slide>
+            <div class="insideSlideImg ng2-lazyloaded" [defaultImage]="defaultImage" [lazyLoad]="image.link" [offset]="offset"></div>
+          </ion-slide>
+        </div>
+      </ion-slides>
+      <div class="headingName">
+        <span class="foWeign600">{{person_name}}, {{person_age}}</span>
+        <span class="foWeign600">{{bio}}</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <div class="hiddenContent"></div>
+  <div class="viewProfileBtmContnt">
+    <div>{{bio}}</div>
+    <div class="marginTop16 fontWeight500">{{gender}} intrested in {{interestedin}}</div>
+    <div class="marginTop16">
+      <span class="label">Location</span>
+      <span class="labelAnswer">{{selectedCity}} {{selectedLocation}}</span>
+    </div>
+    <div class="marginTop16">
+      <span class="label">Occupation</span>
+      <span class="labelAnswer">{{occupation}}</span>
+    </div>
+    <div class="marginTop16">
+      <span class="label">Education</span>
+      <span class="labelAnswer">{{education}}</span>
+    </div>
+  </div> -->
+</ion-content>
+

@@ -1,0 +1,192 @@
+occupation {
+    .contentPading .scroll-content{
+        padding: 0px;
+    }
+    .pinkBtn, .pinkBtn.activated{
+        background-color: #DB49D8;
+        border-radius: 6px;
+        font-weight: 400;
+        margin: 16px 0;
+        text-transform: capitalize;
+    }
+
+.log-container {
+  margin:auto;
+  width:96%;
+  height:15%;
+  border: 1px solid black;
+  overflow-y: scroll;
+}
+
+.log-container span {
+  display:block;
+  width:100%;
+}
+    .card-heap[_nghost-c0]:nth-child(1){
+        max-height: 100% !important;
+    }
+    .imgSize{
+        background-size: cover !important;
+        height: 100%;
+        width: 100%;
+        background-position: center !important;
+        position: relative;
+    }
+
+    .secondName{
+        padding-left: 3px;
+    }
+    .genderCls{
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .genderCls2{
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .dateSection{
+        background: #e2e2e2;
+        border-radius: 4px;
+        float: left;
+        margin: 0 5px;
+    }
+    .dateSectionSub1{
+        background: #fa7470;
+        color: #fff;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 4px 4px 0px 0px;
+    }
+    .dateSectionSub2 span{
+            color: #000;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+        font-size: 15px;
+    }
+    .fullName{
+            white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    }
+    .dateSectionSub2{
+        color: #000;
+        font-size: 12px;
+    }
+    .profileAddImgSec{
+        height: 100px;
+        width: 100px;
+        background-position: center;
+        background-size: cover;
+        margin: auto;
+        position: relative;
+        i{
+            position: absolute;
+            right: -5px;
+            bottom: 0;
+            color: #ff0000;
+            font-size: 30px;
+            background: #fff;
+            padding: 1px 3px;
+            border-radius: 40px;
+            border: 1px solid #7F7F7F;
+        }
+    }
+    .clrChanges {
+        color: #DB49D8;
+        font-size: 26px;
+        padding-top: 4px; 
+    }
+    
+    .setingLabelTxt{
+        color: #999;
+        font-size: 14px;
+    }
+    .setingLabelTxt2{
+        padding: 20px 0 10px 16px;
+    }
+    .setingRangeTxt{
+        padding: 10px 0 0 30px;
+    }
+    .rangeCng{
+        .range-bar{
+            background: #8D8D8D;
+            height: 4px;
+            top: 20px;
+        }
+        .range-bar.range-bar-active{
+            background: #715696;
+        }
+        .range-knob{
+            background: #715696;
+        }
+    }
+    .pinkBtnlftBtn{
+        width: 40%;
+        float: left;
+    }
+    .pinkBtnritBtn{
+        width: 40%;
+        float: right;
+    }
+    ion-item{
+        .item-inner{
+            border: 0;
+        }
+    }
+    .setingLabelTxtmargin0{
+        margin-bottom: 5; 
+    }
+    .border0{
+         text-align: left;
+        .item-inner{
+            border: 0 !important;
+        }
+    }
+    .posRel{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        .iconPostionCng{
+            position: absolute;
+            right: 16px;
+            bottom: 0;
+            line-height: 46px;
+            font-size: 20px;
+        }
+    }
+
+
+    .headerCancelTxt{
+        i{
+            font-size: 41px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -6px;
+            margin-left: -6px;
+            padding-right: 6px;
+        }
+    }
+
+
+
+.ion-spin, .ion-loading-a, .ion-loading-b, .ion-loading-c, .ion-loading-d, .ion-looping, .ion-refreshing, .ion-ios7-reloading { -webkit-animation: spin 1s infinite linear; -moz-animation: spin 1s infinite linear; -o-animation: spin 1s infinite linear; animation: spin 1s infinite linear; }
+
+@-moz-keyframes spin { 0% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(359deg); } }
+@-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); } }
+@-o-keyframes spin { 0% { -o-transform: rotate(0deg); }
+  100% { -o-transform: rotate(359deg); } }
+@-ms-keyframes spin { 0% { -ms-transform: rotate(0deg); }
+  100% { -ms-transform: rotate(359deg); } }
+@keyframes spin { 0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); } }
+
+
+
+}

@@ -1,0 +1,17 @@
+page-myphotoall {
+     .profileAddImgSec{
+     img{
+        height: 80px;
+        width: 80px;
+        background-position: center !important;
+        background-size: cover !important;
+        margin: auto;
+        position: relative;
+        object-fit: cover;
+        }
+    }
+    .imgFbGal{
+        float: left;
+        margin: 10px;
+    }
+}

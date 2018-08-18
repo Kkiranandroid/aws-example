@@ -1,0 +1,177 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title class="dateinTitle">
+      <!--     <i *ngIf="isFrom!=='loginPage' && isEdit==false" class="fa fa-user-circle flotLft bluSelect" aria-hidden="true" (click)="goBack()"></i> -->
+      <span *ngIf="isFrom!=='loginPage'" class="headerCancelTxt" (click)="goBack()">Cancel</span>
+      <!-- <span class="alignMainHead" >DateIN</span> -->
+      <div class="logoImageLatestMain" *ngIf="isFrom=='loginPage'" (click)="goBack()">
+        <div class="logoImageLatest"></div>
+      </div>
+      <!--   <span class="alignMainHead2 clrBlack" *ngIf="isFrom!=='loginPage' && isEdit==true">Profile</span> -->
+      <span *ngIf="isFrom!=='loginPage'" class="headerDoneTxt" (click)="done()">Done</span>
+      
+      <span *ngIf="isFrom!=='loginPage'" (click)="goBack()"> 
+        <img class="externalImges" src="assets/icon/user/user_blue.png">
+      </span>
+
+      <span *ngIf="isFrom!=='loginPage' && isEdit==false" class="headerDoneTxt" style="display:none;" (click)="goBack()">Back</span>
+
+      <!--  <i *ngIf="isFrom!=='loginPage' && isEdit==false" class="fa fa-comment flotRit {{toolBarIconColorMsg}}" aria-hidden="true" (click)="messagePage();"><span></span></i> -->
+    </ion-title>
+    <!-- <button (click)="goToHome();" class="nxtButton"> next<i class="fa fa-angle-right" aria-hidden="true"></i> </button> -->
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  
+  <ion-list no-border class="profileMainSection">
+    <div class="msgMain" style="position:relative;">
+      
+      <div *ngIf="!isProfilePhotosEdit">
+        <div class="matchScroll" *ngFor="let image of profileImages">
+          <div as-sortable is-disabled="true" *ngIf="image.profilepic==''" class="matchScrollImg1" (click)="presentActionSheet()">
+            <ion-icon name="md-add"></ion-icon>
+          </div>
+          <div *ngIf="image.profilepic!==''" class="matchScrollImg1" (press)="profilePhotosEdit()">
+
+            <img class="matchScrollImg1" id="id_profilepic{{image.position}}" [defaultImage]="defaultImage" [lazyLoad]="image.profilepic" [offset]="offset">
+            
+            <!-- <img class="matchScrollImg1" id="id_profilepic{{image.position}}" [src]="image.profilepic"> -->
+
+            <canvas #canvasforbase style="display:none;"></canvas>
+            <!-- <ion-icon *ngIf="image.feverate=='1'" name="md-star" class="starFav"></ion-icon> -->
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="isProfilePhotosEdit" style="min-height:180px" (click)="addOnMoveMode()">
+        <div class="row" [sortablejs]="pictureList">
+          <div class="matchScroll" *ngFor="let image of pictureList; let i = index" (click)="addOnMoveMode('clikedOnImage')">
+            <div *ngIf="image.profilepic!==''" class="matchScrollImg1Active active">
+
+              <img class="matchScrollImg1Active" id="id_profilepic{{image.position}}" [defaultImage]="defaultImage" [lazyLoad]="image.profilepic" [offset]="offset">
+              <!-- <img class="matchScrollImg1" id="id_profilepic{{image.position}}" [src]="image.profilepic"> -->
+              
+              <canvas #canvasforbase style="display:none;"></canvas>
+              <!--MH 01/05/2018 Removed delete icon as not working correctly-->
+              <ion-icon name="md-close" class="deleteIcon" (click)="deleteIconClicked(image,i);"> </ion-icon>
+                <!--<ion-icon *ngIf="image.feverate=='1'" name="md-star" class="starFav"></ion-icon>
+                <ion-icon *ngIf="image.deleteicon=='1'" name="md-close" class="deleteIcon" (click)="deleteIconClicked();"> </ion-icon>-->
+            </div>
+          </div>
+        </div>
+
+        <!-- Add icons background dummy div -->
+        <div *ngIf="isProfilePhotosEdit" class="alignItemPlus">
+        <div class="matchScroll" *ngFor="let image of profileImages">
+
+          <div as-sortable is-disabled="true" class="matchScrollImg1" >
+            <ion-icon name="md-add"></ion-icon>
+          </div>
+
+          <!-- <div as-sortable is-disabled="true" *ngIf="image.profilepic==''" class="matchScrollImg1" >
+            <ion-icon name="md-add"></ion-icon>
+          </div>
+
+          <div as-sortable is-disabled="true" *ngIf="image.profilepic!==''" style="display:none;" class="matchScrollImg1" >
+            <ion-icon name="md-add"></ion-icon>
+          </div> -->
+
+        </div>
+      </div>
+        <!-- Add icons div -->
+      </div>
+      <div style="width: 100%;text-align: center;">
+        <span class="editmsglabel">Hold and drag to set the order of your photos</span>
+      </div>
+      <!-- </ion-scroll> -->
+    </div>
+
+    <div class="setingLabelTxt setingLabelTxt2">My age</div>
+    <div class="setingRangeTxt">Age <span>{{age}}</span></div>
+    
+    <ion-item class="bottomProfileSection">
+      <ion-range pin="false" debounce="1000" min="18" [(ngModel)]="age" color="dark" class="rangeCng" (ionChange)="myageChange($event)"></ion-range>
+    </ion-item>
+ <!--  </div> -->
+    <span class="labelHeadMain">About Me</span>
+    <ion-item class="bottomProfileSection removetextareaborder">
+      <ion-textarea [(ngModel)]="biodata" autocorrect="on" autocomplete="on" placeholder="Something about yourself" value={{bio}} (keydown)="savebiodata($event)" (focus)="checkFocus()" autosize></ion-textarea>
+    </ion-item>
+    <!-- <span class="labelHeadMain labelHeadMainMargin">Settings</span> -->
+    <!--     <span class="labelHeadMain">Occupation</span> -->
+    <span class="labelHeadMain">Job Title</span>
+    <ion-item class="bottomProfileSection removetextareaborder">
+      <ion-input [(ngModel)]="occupation" autocorrect="on" autocomplete="on" placeholder="What is your job?" value={{occupation}} (keyup)="saveOccupationData($event)" (focus)="checkFocus()"></ion-input>
+    </ion-item>
+    <span class="labelHeadMain">Education</span>
+    <ion-item class="bottomProfileSection removetextareaborder">
+      <ion-input [(ngModel)]="education" autocorrect="on" autocomplete="on" placeholder="Where did you go to school?" value={{education}} (keyup)="saveEducationData($event)" (focus)="checkFocus()"></ion-input>
+    </ion-item>
+    <!-- <span class="addArrow">
+                <ion-item class="bottomProfileSection">Occupation
+                    <ion-note item-end (click)="gotoOccupation()"> {{occupation}}</ion-note>
+                </ion-item>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </span>
+    <span class="addArrow">
+                <ion-item class="bottomProfileSection">Education
+                    <ion-note item-end (click)="gotoEducation()">{{education}}</ion-note>
+                </ion-item>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </span> -->
+    <span class="addArrow">
+                <ion-item class="bottomProfileSection"> I'm a...
+                    <ion-note item-end (click)="showGenderPopup()">{{gender}}</ion-note>
+                </ion-item>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </span>
+    <span class="addArrow">
+                <ion-item class="bottomProfileSection" (click)="showRadio()"> Interested in...
+                    <ion-note item-end>{{interestedin}}</ion-note>
+                </ion-item>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </span>
+    <!-- <ion-item class="bottomProfileSection">
+      <ion-label>Public Profile</ion-label>
+      <ion-toggle [(ngModel)]="profilevisible" checked="true" (ionChange)="profileVisible();"></ion-toggle>
+    </ion-item> -->
+    <!-- 
+    <div class="setingLabelTxt setingLabelTxt2">Age</div>
+    <div class="setingRangeTxt">Between <span>{{agerange.lower}}</span> and <span>{{set70PlusValue(agerange.upper)}}</span></div>
+    <ion-item class="bottomProfileSection">
+      <ion-range min="18" max="71" dualKnobs="true" pin="false" debounce="1000" [(ngModel)]="agerange" color="dark" class="rangeCng"(ionChange)="agechange($event)"></ion-range>
+    </ion-item>
+    <div class="setingLabelTxt setingLabelTxt2">Distance</div>
+    <div class="setingRangeTxt">Up to <span>{{distancerange}}</span> milesaway</div>
+    <ion-item class="bottomProfileSection">
+      <ion-range pin="false" debounce="1000" [(ngModel)]="distancerange" color="dark" class="rangeCng" (ionChange)="distancechange($event)"></ion-range>
+    </ion-item> -->
+    <!-- <ion-item class="bottomProfileSection">
+      <ion-label>Push notification</ion-label>
+      <ion-toggle [(ngModel)]="pushnotification" (ionChange)="notificationChange();"></ion-toggle>
+    </ion-item> -->
+    <!-- <ion-item class="bottomProfileSection">
+      <ion-label>Sounds</ion-label>
+      <ion-toggle [(ngModel)]="sound" (ionChange)="soundChange();"></ion-toggle>
+    </ion-item> -->
+
+    <div class="finishBtnFxd" *ngIf="isFrom=='loginPage'"><button ion-button class="bluBtn singleButton singleButtonFinish" (click)="goToHome();">Finish Setup</button></div>
+    <button *ngIf="isFrom!=='loginPage' && isInstgramLoggedIn" ion-button class="bluBtn singleButton" style="display:none; font-size: 11px;" (click)="instagramlogin();">Connect to instagram</button>
+    
+
+    <div *ngIf="!isInstgramLoggedIn" class="instagramScrollDiv">
+      <ion-item class="item111"> Instagram connected
+        <span item-end class="btnDisconnect" (click)="instagramDisconnect()">Disconnect</span>
+      </ion-item>
+      <ion-scroll scrollX="true" >
+        <div class="matchScroll" *ngFor="let image of InstagramImages; let i=index;">
+          <div class="matchScrollImg1">
+            <img class="matchScrollImg1" [defaultImage]="image.thumbnail" [lazyLoad]="image.standard_resolution" [offset]="offset"><!-- [src]="image.standard_resolution" -->
+          </div>
+        </div>
+            
+      </ion-scroll>
+    </div>
+
+  </ion-list>
+</ion-content>

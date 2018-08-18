@@ -1,0 +1,493 @@
+page-profilescreen {
+  .finishBtnFxd {
+    /*background: #9a9a9a;*/
+    padding: 10px 0;
+    .singleButtonFinish {
+      width: calc(100% - 20px);
+      border-radius: 10px;
+      height: 44px;
+      margin: 0;
+      margin: auto;
+    }
+  }
+  .profileMainSection {
+    margin-bottom: 0;
+  }
+  ion-input {
+    .input-cover {
+      pointer-events: auto !important;
+      position: absolute !important;
+    }
+  }
+
+  .item111 {
+    ion-label {
+      font-size: 15px !important;
+      color: #8E8E93;
+    }
+    .item-inner {
+      border: 0 !important;
+    }
+  }
+  .item-input-has-focus input,
+  .input-has-focus input {
+    pointer-events: auto !important;
+  }
+
+  .editmsglabel {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .pinkBtnlftBtn {
+    width: 40%;
+    float: right;
+  }
+  .pinkBtn,
+  .pinkBtn.activated {
+    background-color: #DB49D8;
+    border-radius: 6px;
+    font-weight: 400;
+    margin: 16px 0;
+    text-transform: capitalize;
+  }
+
+  .btnDisconnect {
+    color: #35A8DF;
+    font-weight: 500;
+  }
+
+  .instagramScrollDiv {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    ion-scroll {
+      white-space: nowrap;
+      height: 80px;
+    }
+    .matchScroll {
+      display: inline-block;
+      text-align: center;
+      margin: 0;
+      vertical-align: top;
+      width: 25%;
+      span {
+        width: 65px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+        padding-top: 5px;
+      }
+    }
+  }
+
+  .msgMain {
+    padding: 0 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    ion-scroll {
+      white-space: nowrap;
+      height: 80px;
+    }
+    .matchScroll {
+      display: inline-block;
+      text-align: center;
+      margin: 0;
+      vertical-align: top;
+      width: 33.3%;
+      span {
+        width: 65px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+        padding-top: 5px;
+      }
+    }
+  }
+
+  .matchScrollImg1.active {
+    border: 2px solid #53D769;
+    position: relative;
+  }
+
+  .matchScrollImg1 {
+    height: 80px;
+    width: 80px;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 20px;
+    margin: 0 auto;
+    border: 1px solid #E5E5E5;
+    object-fit: cover;
+    margin-bottom: 10px;
+    ion-icon {
+      line-height: 80px;
+      font-size: 30px;
+      color: $buttonprimary;
+      font-weight: 600;
+    }
+
+    ion-spinner {
+      line-height: 80px;
+      font-size: 30px;
+      color: $buttonprimary;
+      font-weight: 600;
+    }
+  }
+
+
+  .matchScrollImg1Active.active {
+    border: 2px solid #350B72;
+    position: relative;
+    height: 80px;
+  }
+
+  .matchScrollImg1Active {
+    width: 80px;
+    height: 76px;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 20px;
+    margin: 0 auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    ion-icon {
+      line-height: 80px;
+      font-size: 30px;
+      color: $buttonprimary;
+      font-weight: 600;
+    }
+
+    ion-spinner {
+      line-height: 80px;
+      font-size: 30px;
+      color: $buttonprimary;
+      font-weight: 600;
+    }
+  }
+
+
+  .matchScroll {
+    position: relative;
+    .starFav {
+      position: absolute;
+      top: -5px;
+      right: 5px;
+      color: #fff;
+      font-size: 12px;
+      background: $buttonprimary;
+      padding: 4px;
+      border-radius: 50%;
+      line-height: 9px;
+    }
+    .deleteIcon {
+      position: absolute;
+      bottom: -8px;
+      right: -5px;
+      color: #fff;
+      font-size: 15px;
+      background: #350B72;
+      padding: 6px;
+      border-radius: 50%;
+      line-height: 9px;
+    }
+  }
+  .secProMain {
+    display: table;
+    width: 100%;
+    padding-right: 16px;
+    p {
+      margin: 0;
+      padding-bottom: 16px;
+    }
+    .lftSecPro {
+      float: left;
+      color: #8E8E93;
+    }
+    .ritSecPro {
+      float: right;
+      color: $buttonprimary;
+    }
+  }
+  .note {
+    color: #8E8E93;
+  }
+  .topProfileSec {
+    margin-bottom: 0px;
+    display: table;
+    width: 100%;
+    padding-left: 16px;
+    margin-top: 10px;
+    p {
+      margin: 0;
+      text-align: center;
+      color: $buttonprimary;
+      padding-top: 5px;
+    }
+    .profilescreenMain {
+      margin-top: 0px;
+      img {
+        width: 93px;
+        height: 93px;
+      }
+    }
+    .profileMainSectionTop1 {
+      float: left;
+    }
+    .profileMainSectionTop2 {
+      float: right;
+      width: calc(100% - 95px);
+      margin-bottom: 0;
+      margin-top: 5px;
+      ion-item:first-child {
+        border-top: 0;
+      }
+      ion-item:last-child {
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+        .item-inner {
+          border-bottom: 1px solid #dedede;
+        }
+      }
+      .inputSections.input-has-focus {
+        .item-inner {
+          border-bottom: 1px solid #dedede;
+          box-shadow: none;
+        }
+      }
+      .inputSections.input-has-focus {
+        border-bottom: 0;
+        box-shadow: none;
+      }
+    }
+  }
+  .profileMainSection {
+    .inputSections {
+      border-top: 0 !important;
+      ion-label {
+        color: #000;
+      }
+      ion-input {
+        input {
+          text-align: right;
+          color: #8E8E93;
+        }
+      }
+    }
+  }
+  .toolbar-title-ios {
+    i {
+      line-height: 50px;
+    }
+  }
+  .toolbar-title-md {
+    i {
+      line-height: 56px;
+    }
+  }
+  .labelHeadMain {
+    display: block;
+    padding: 0px 15px;
+    color: #8E8E93;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  .labelHeadMainMargin {
+    padding-top: 40px;
+  }
+  .bottomProfileSection {
+    padding-left: 8px;
+    padding-bottom: 15px;
+    ion-textarea {
+      textarea {
+        margin-left: 7px;
+      }
+    }
+    ion-label {
+      padding-left: 8px;
+      color: #8E8E93;
+    }
+    ion-note {
+      color: #000;
+    }
+  }
+  .inputSections.input-has-focus {
+    .item-inner {
+      border-bottom: 1px solid #dedede !important;
+      box-shadow: none !important;
+    }
+  }
+  .inputSections.input-has-focus {
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+  }
+
+
+  ion-note {
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+  }
+  .addArrow {
+    display: inline-block;
+  }
+
+  .setingLabelTxt {
+    color: #8E8E93;
+    font-size: 14px;
+  }
+  .setingLabelTxt2 {
+    text-transform: uppercase;
+    padding: 20px 0 10px 15px;
+    font-size: 14px !important;
+  }
+  .setingRangeTxt {
+    color: #8E8E93;
+    padding: 10px 0 0 15px;
+  }
+  .rangeCng {
+    .range-bar {
+      background: #8D8D8D;
+      height: 4px;
+      top: 20px;
+    }
+    .range-bar.range-bar-active {
+      background: $buttonprimary;
+    }
+    .range-knob {
+      background: $buttonprimary;
+    }
+  }
+  .removetextareaborder {
+    .item-inner {
+      border-bottom: 1px solid #dedede !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+.testDrag {
+  display: inline-block;
+  width: 100%;
+  div {
+    width: 25%;
+    float: left;
+    background: #ffbe00;
+    color: #fff;
+    padding: 10px 0;
+  }
+}
+
+.matchScrollModal {
+  float: left;
+  text-align: center;
+  margin: 0px;
+  vertical-align: top;
+  span {
+    width: 65px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    padding-top: 5px;
+  }
+  .matchScrollImg1 {
+    height: 80px;
+    width: 80px;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 20px;
+    margin: 0 auto;
+    border: 1px solid #E5E5E5;
+    object-fit: cover;
+    ion-icon {
+      line-height: 80px;
+      font-size: 30px;
+      color: $buttonprimary;
+      font-weight: 600;
+    }
+  }
+
+  ion-reorder {
+    ion-icon {
+      position: relative;
+      visibility: hidden;
+      &:after {
+        content: "\f0c9";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        color: #000;
+        font-size: 18px;
+        padding-right: 0.5em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.mainModalClass {
+  width: 100%;
+  margin: auto;
+  display: table;
+  height: 100%;
+  span.innnerContnt {
+    display: table-cell;
+    vertical-align: middle;
+    .bgClrCng {
+      display: inline-block;
+      background: #ffffff;
+      h1 {
+        padding: 0 13px;
+        padding: 15px 13px;
+        border-bottom: 2px solid #ccc;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.modalContntClr {
+  background: rgba(0, 0, 0, 0.5);
+  .modalBtmBtns {
+    display: inline-block;
+    width: 100%;
+    padding: 13px;
+    button {
+      width: 48%;
+      margin: 0;
+      &:first-child {
+        float: left;
+      }
+      &:last-child {
+        float: right;
+      }
+    }
+  }
+}
+
+.dateinTitleModule {
+  font-weight: 500;
+  font-size: 27px;
+  .toolbar-title {
+    color: #000;
+    font-size: 27px;
+    font-weight: 500;
+  }
+  &:befoure {
+    content: "\f104";
+    padding: 10px;
+    color: #000;
+    font-size: 37px;
+  }
+}

@@ -1,0 +1,172 @@
+page-view-others-profile {
+  .content-ios {
+    .scroll-content {
+      -webkit-overflow-scrolling: auto !important;
+    }
+  }
+    .localClass{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 11111;
+        top: 0px;
+        left: 18px;
+        width: calc(100% - 10px);
+        height: calc(100% - 95px);
+        border-radius: 10px;
+    }
+    .content-ios .localClass{
+        top: 7px;
+        left: 18px;
+    }
+    .norecordsfound2 {
+          display: table;
+          width: calc(100vh - 293px);
+          height: calc(100vh - 80px);
+          background-color:  #EEEEEE !important;
+
+        }
+    .content-ios .norecordsfound2 {
+        width: calc(100vh - 329px);
+    }
+.norecordsfoundMain2 {
+  display: table-cell;
+  vertical-align: middle;
+}
+.norecordsfoundSub2 {
+  visibility: visible !important;
+  text-align: center;
+  color: #999;
+}
+.cardLoading{
+  width: 30% !important;
+  height: 30% !important;
+}
+
+	.sliderViewPage{
+        .insideSlideImg{
+            height: calc(100vh - 80px);
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+        }
+    }
+    ion-content{
+        background: rgb(254,254,254); 
+        background: -moz-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(252,252,252,1) 24%, rgba(246,246,246,1) 51%, rgba(241,241,241,1) 75%, rgba(232,232,232,1) 100%); 
+        background: -webkit-linear-gradient(top, rgba(254,254,254,1) 0%,rgba(252,252,252,1) 24%,rgba(246,246,246,1) 51%,rgba(241,241,241,1) 75%,rgba(232,232,232,1) 100%); 
+        background: linear-gradient(to bottom, rgba(254,254,254,1) 0%,rgba(252,252,252,1) 24%,rgba(246,246,246,1) 51%,rgba(241,241,241,1) 75%,rgba(232,232,232,1) 100%); 
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e8e8e8',GradientType=0 );
+    }
+    .sliderViewFixed{
+        position: fixed;
+        top: 56px;
+        left: 0;
+        right: 0;
+        height: calc(100% - 80px);
+    }
+    .hiddenContent{
+        height: calc(100% - 155px);
+        z-index: -1111;
+    }
+    .content-ios .hiddenContent{
+        height: calc(100% - 145px);
+    }
+    .content-ios .sliderViewFixed{
+        top: 70px;
+    }
+    .sliderViewPageMain {
+        display: block;
+        transition: top 0.1s, bottom 0.1s;
+        text-align: center;
+        border-radius: 20px;
+        background-color: #eee;
+        transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+        backface-visibility: hidden;
+        width: calc(100% - 40px) !important;
+        margin: auto;
+        height: 100%;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        position: relative; 
+        overflow: hidden;
+        contain: strict;
+        box-shadow: 0px 5px 8px 0px rgba(115, 115, 115, 1);
+        .sliderViewPage{
+            display: block;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            height: 100%;
+        }
+    }
+    .headingName{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: #fff;
+        text-align: left;
+        background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.27) 100%); 
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.27) 100%);
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.27) 100%); 
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#45000000',GradientType=0 );
+        padding: 12px;
+        z-index: 111;
+            span{
+                display: block;
+                &.foWeign600{
+                    font-weight: 500;
+                }
+            }
+        }
+    .sliderViewPage .swiper-pagination {
+        text-align: right;
+    }
+    .sliderViewPage .swiper-pagination button {
+        width: 8px;
+        height: 8px;
+        margin: 0 4px !important;
+        background: #fff;
+        opacity: 0.5;
+        display: inline-block;
+        vertical-align: middle;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .sliderViewPage .swiper-pagination button.swiper-pagination-bullet-active {
+        opacity: 1;
+        width: 10px;
+        height: 10px;
+    }
+    .viewProfileBtmContnt{
+        background: #fff;
+        width: calc(100% - 16px);
+        margin: auto;
+        border-radius: 10px;
+        padding: 16px;
+        position: relative;
+        border: 1px solid #E5E5E5;
+        box-shadow: 0px 5px 15px 0px #737373;
+        color: #000;
+        font-size: 16px;
+        .label{
+            display: block;
+            color: #8E8E93;
+            font-size: 14px;
+        }
+        .labelAnswer{
+            display: block;
+        }
+    }
+    .marginTop16{
+        margin-top: 16px;
+    }
+    .fontWeight500{
+        font-weight: 500; 
+    }
+}

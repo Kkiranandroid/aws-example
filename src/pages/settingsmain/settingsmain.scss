@@ -1,0 +1,293 @@
+settingsmain {
+
+     .content-ios {
+        .scroll-content {
+          -webkit-overflow-scrolling: auto !important;
+        }
+      }
+    /*06-12-2018 changes*/
+    ion-header{
+        ion-navbar{
+            .toolbar-background{
+                background-color: transparent;
+                border-color: transparent !important;
+            }
+        }
+    }
+    ion-content{
+        background: rgb(255,254,255);
+        background: -moz-linear-gradient(top, rgba(255,254,255,1) 0%, rgba(247,247,249,1) 50%, rgba(232,232,236,1) 100%);
+        background: -webkit-linear-gradient(top, rgba(255,254,255,1) 0%,rgba(247,247,249,1) 50%,rgba(232,232,236,1) 100%);
+        background: linear-gradient(to bottom, rgba(255,254,255,1) 0%,rgba(247,247,249,1) 50%,rgba(232,232,236,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffeff', endColorstr='#e8e8ec',GradientType=0 );
+    }
+    .fontSize27{
+        i{
+            font-size: 27px;
+        }
+    }
+    .clrBlack {
+        color: #000 !important;
+    }
+    .proFileNewChanhes{
+        display: block;
+        transition: top 0.1s, bottom 0.1s;
+        text-align: center;
+        border-radius: 20px;
+        background-color: #eee;
+        transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+        backface-visibility: hidden;
+        width: calc(100% - 60px);
+        margin: auto;
+        height: calc(100% - 160px);
+        margin-top: 0px;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+        contain: strict;
+        box-shadow: 0px 5px 8px 0px rgba(115, 115, 115, 1);
+        .profileAddImgSec2{
+            display: block;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+        }
+        .headingName{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: #fff;
+            text-align: left;
+            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.27) 100%); 
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.27) 100%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.27) 100%); 
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#45000000',GradientType=0 );
+            span{
+                padding: 16px;
+                display: block;
+            }
+        }
+    }
+    .myProfileSetings{
+        button:first-child{
+            border-top: 0.55px solid rgba(0, 0, 0, 0.3);
+        }
+        button:last-child{
+            border-bottom: 0.55px solid rgba(0, 0, 0, 0.3);
+            .item-inner{
+                border: 0 !important;
+            }
+        }
+        button{
+            padding-left: 7px;
+            .item-inner{
+                padding-right: 32px !important;
+                border-bottom: 0.55px solid rgba(0, 0, 0, 0.3) !important;
+                background-image: none !important; 
+                ion-label{
+                    padding-left: 9px;
+                    color: $buttonprimary;
+                }
+                &:after{
+                    content: "\f105";
+                    font-family: FontAwesome;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-decoration: inherit;
+                    color: #ddd;
+                    font-size: 25px;
+                    padding-right: 0.5em;
+                    position: absolute;
+                    top: 10px;
+                    right: 0;
+                }
+            }
+        }
+    }
+    /*06-12-2018 changes*/
+    .toolbar-title i {
+        line-height: 56px;
+    }
+    .contentPading .scroll-content{
+        padding: 16px 5px;
+    }
+    .pinkBtn, .pinkBtn.activated{
+        background-color: #DB49D8;
+        border-radius: 6px;
+        font-weight: 400;
+        margin: 16px 0;
+        text-transform: capitalize;
+    }
+
+.log-container {
+  margin:auto;
+  width:96%;
+  height:15%;
+  border: 1px solid black;
+  overflow-y: scroll;
+}
+
+.log-container span {
+  display:block;
+  width:100%;
+}
+    .card-heap[_nghost-c0]:nth-child(1){
+        max-height: 100% !important;
+    }
+    .imgSize{
+        background-size: cover !important;
+        height: 100%;
+        width: 100%;
+        background-position: center !important;
+        position: relative;
+    }
+
+    .secondName{
+        padding-left: 3px;
+    }
+    .genderCls{
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .genderCls2{
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .dateSection{
+        background: #e2e2e2;
+        border-radius: 4px;
+        float: left;
+        margin: 0 5px;
+    }
+    .dateSectionSub1{
+        background: #fa7470;
+        color: #fff;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 4px 4px 0px 0px;
+    }
+    .dateSectionSub2 span{
+            color: #000;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+        font-size: 15px;
+    }
+    .fullName{
+            white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    }
+    .dateSectionSub2{
+        color: #000;
+        font-size: 12px;
+    }
+    .profileAddImgSec{
+        height: 100px;
+        width: 100px;
+        background-position: center !important;
+        background-size: cover !important;
+        margin: auto;
+        position: relative;
+            background-repeat: no-repeat !important;
+        i{
+            position: absolute;
+            right: -5px;
+            bottom: 0;
+            color: #ff0000;
+            font-size: 30px;
+            background: #fff;
+            padding: 1px 3px;
+            border-radius: 40px;
+            border: 1px solid #7F7F7F;
+        }
+    }
+    .clrChanges {
+        color: #DB49D8;
+        font-size: 26px;
+        padding-top: 4px; 
+    }
+
+
+
+
+    .contactSec{
+        text-align: center;
+        i{
+            font-size: 20px;
+            vertical-align: middle;
+            color: #db49d8;
+        }
+        span{
+            vertical-align: middle;
+            font-size: 16px;
+            padding-left: 10px;
+        }
+    }
+
+
+    .profileAddImgSec:after {
+        content: '';
+        position: absolute;
+        left: -5px;
+        top: -5px;
+        right: -5px;
+        bottom: -5px;
+        border: 1px solid gray;
+        border-radius: 5%;
+    }
+    .profileAddImgSec {
+        height: 120px;
+        width: 120px;
+        margin-bottom: 40px;
+    }
+    .singleButton {
+        margin-bottom: 20px;
+        height: 55px;
+        width: 70%;
+        border-radius: 5px;
+    }
+
+    #sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+  #sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 100px; height: 90px; font-size: 4em; text-align: center; }
+  
+
+}
+
+
+
+.padingTop0{
+    padding-top: 0 !important;
+}
+.alignRitIcons{
+    position: absolute !important;
+    right: 16px !important;
+}
+
+.logoImageLatestMain {
+    position: absolute;
+    left: 50px;
+    right: 50px;
+}
+.logoImageLatest {
+    background-image: url(../assets/imgs/WoowooLogoHead1.png);
+    width: 110px;
+    height: 45px;
+    background-size: contain;
+    background-position: center;
+    margin: auto;
+    background-repeat: no-repeat;
+}
+.externalImgesRight{
+    float: right;
+}

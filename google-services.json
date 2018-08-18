@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "919127825518",
+    "firebase_url": "https://woowoo-e38e7.firebaseio.com",
+    "project_id": "woowoo-e38e7",
+    "storage_bucket": "woowoo-e38e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919127825518:android:4eb356188e2204c2",
+        "android_client_info": {
+          "package_name": "com.woowooapp.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "919127825518-3ke2n4sr8og6p7uc4ua4gots7t8cv3bl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRYP8y4tnQ6JHUnzqNJmSIxc94IVIqdfQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919127825518:android:17aaa0f8e6a2f022",
+        "android_client_info": {
+          "package_name": "com.woowooapp.appwoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "919127825518-3ke2n4sr8og6p7uc4ua4gots7t8cv3bl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRYP8y4tnQ6JHUnzqNJmSIxc94IVIqdfQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

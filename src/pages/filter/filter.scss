@@ -1,0 +1,39 @@
+page-filter {
+    .toolbar-title-md{
+        border-bottom: 1px solid #CBCBCB; 
+    }
+    .radioBtnMain{
+        ion-item{
+            padding-left: 8px;
+            ion-label{
+                padding-left: 8px;
+                font-weight: 500;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                ion-icon{
+                    margin-right: 16px;
+                    border-radius: 6px;
+                    padding: 5px;
+                }
+            }
+        }
+        ion-item.item-radio-checked{
+            ion-label{
+                color: $buttonprimary !important;
+                ion-icon{
+                    color: #fff;
+                    background: $buttonprimary;
+                }
+            }
+        }
+    }
+    .filterHeads{
+        margin: 0;
+        font-size: 18px;
+        padding: 10px 16px;
+        background: #F9F9F9;
+    }
+}
+.marginTop50{
+    margin-top : 50px !important;
+}

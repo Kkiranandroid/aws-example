@@ -1,0 +1,70 @@
+<ion-header>
+    <ion-navbar hideBackButton>
+        <ion-title class="dateinTitle"> 
+            <span class="headerCancelTxt" (click)="cancel()">Cancel</span> 
+                <span class="alignMainHead2">{{PageTitle}}</span> 
+            <span class="headerDoneTxt" (click)="goToCalender()">Next</span>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+    <h5 class="h5Heading"> Location of date? </h5>
+    <div class="calenderSection2">
+        <ion-row>
+            <ion-col col-2><!-- (click)="myLocation(true)" -->
+                <ion-icon class="locationIcons" name="ios-pin-outline"></ion-icon>
+            </ion-col>
+            <ion-col col-10 class="secondSec" (click)="openModalLocation()">
+                <div *ngIf="city!==''">
+                    <h1>{{city}}</h1>
+                    <p>{{city}}, {{location}}</p>
+                </div>
+                <div class="chooseLocation" *ngIf="city===''">
+                    <h1>Choose Location</h1>
+                </div>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </ion-col>
+        </ion-row>
+    </div>
+
+    <div class="addBtnClassDiv" *ngIf="isFrom !== 'FTUE'" (click)="goToCalender()">
+        <button ion-button class="addBtnClass">
+        <ion-icon class="flotingIcon"ios="ios-arrow-round-forward" md="md-arrow-round-forward"></ion-icon>
+        <!-- <ion-icon class="flotingIcon" ios="ios-arrow-round-forward" md="md-arrow-round-forward"></ion-icon> -->
+        </button>
+    </div>
+    
+    <!--first time user exp-->
+    <div class="alignButtonBtm" *ngIf="isFrom == 'FTUE'" (click)="goToCalender()">
+        <button ion-button class="alignButtonBtmSub bluBtn">Next</button>
+    </div>
+    <!--first time user exp-->
+</ion-content>
+
+
+
+
+<!--first time user exp-->
+
+<div [className]="firstTimeUserExp">
+    <div class="firstTimeUserExpSub">
+      <div class="firstTimeUserExpTop1 firstTimeUserExpTop4">
+          <div style="background-image: url(assets/imgs/plannowFtue1.png);" class="firstTimeUserExpTop1img4"></div>
+      </div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner1" style="background-image: url(assets/imgs/fiuiHomeSide2.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner2" style="background-image: url(assets/imgs/fiuiHomeSide.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner3" style="background-image: url(assets/imgs/fiuiHomeSide2.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner4" style="background-image: url(assets/imgs/fiuiHomeSide.png);"></div>
+    </div>
+    <div class="alignInstagramdesign outNowFabs">
+        <ion-fab center bottom class="fabSection"  (click)="firstTimeUserExpClick()">
+            <button ion-fab color="danger" class="fabSectionSub">
+                <span class="dIconInner dIconInnerMain dIconInnerMainPurpole">
+                    <span class="dIconInnerSub" style="background-image: url(assets/imgs/WoowooTics.png);width: 33px;height: 33px;margin: 18px;"></span>
+                </span>
+            </button>
+        </ion-fab>
+    </div>
+</div>
+<!--first time user exp-->

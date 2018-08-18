@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar hideBackButton>
+        <ion-title> <span class="headerCancelTxt" (click)="cancel();">Cancel</span> <span class="alignMainHead2 clrBlack">Photos</span> <span class="headerDoneTxt" (click)="done();">Done</span> </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-grid class="gridMainSec">
+        <ion-row>
+            <ion-col><ion-icon name="ios-camera" class="icon1" (click)="clickedCameraIcon();"></ion-icon></ion-col>
+            <ion-col><ion-icon name="ios-albums" class="icon2" (click)="clickedFileIcon();"></ion-icon></ion-col>
+            <ion-col><ion-icon name={{starColor}} class="icon3" (click)="clickedStarIcon();"></ion-icon></ion-col>
+            <ion-col><ion-icon name="ios-trash" class="icon4" [style.color]="clrGray" (click)="clickedDeleteIcon();"></ion-icon></ion-col>
+        </ion-row>
+    </ion-grid>
+    
+    <div class="imgSections">
+        <img *ngIf="largePhoto" src={{largePhoto}}>
+        <div *ngIf="!largePhoto" class="matchScrollImg3"><span (click)="presentActionSheet()">Add a photo</span></div>
+    </div>
+    
+    <div class="msgMain">
+        <ion-scroll scrollX="true" >
+
+        <div class="matchScroll" *ngFor="let image of profileImages; let i=index;">
+                <div *ngIf="image.profilepic==''" class="matchScrollImg1" (click)="clickBottomAddButton(image,i)"><ion-icon name="md-add"></ion-icon>
+            </div>
+
+            <div *ngIf="image.profilepic!==''" class="matchScrollImg1">
+                <img class="matchScrollImg1"  id="id_profilepic{{image.position}}" [src]=" image.profilepic " (click)="ckickedImage(image.profilepic,image);"> 
+                    <canvas #canvasforbase style="display:none;"></canvas>
+            </div>
+            </div>
+            
+        </ion-scroll>
+    </div>
+</ion-content>

@@ -1,0 +1,173 @@
+page-first-time-user-exp {
+.content-ios {
+    .scroll-content {
+      -webkit-overflow-scrolling: auto !important;
+    }
+  }
+    ion-content{
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        margin: 5px;
+        border-radius: 10px;
+        overflow: hidden;
+        contain: strict;
+    }
+    .loginCarocel{
+        .slide-zoom{
+            height: 100%;
+        }
+        .loginCarocelImgs{
+            width: 190px;
+            margin: auto;
+            height: 65%;
+            background-size: contain !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            margin-top: 0px;
+        }
+        .swiper-pagination{
+            bottom: 20px;
+            button.swiper-pagination-bullet{
+                background: #8C8C8C;
+                margin: 0 3px;
+                width: 6px;
+                height: 6px;
+            }
+            button.swiper-pagination-bullet.swiper-pagination-bullet-active{
+                background: #000;
+            }
+        }
+    }
+    .loginBtnChanges{
+        width: calc(100% - 60px);
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        z-index: 111;
+        border-radius: 10px;
+        margin: 0;
+        margin: auto;
+        i{
+            padding-right: 16px;
+        }
+    }
+    .slideBgMainLogin{
+        position: absolute;
+        left: 0px;
+        right: 0;
+        margin-left: -25%;
+        top: 0;
+        width: 150%;
+        height: 70%;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: top center !important;
+    }
+    .loginCarocelImgsTxt{
+        position: absolute;
+        bottom: 115px;
+        left: 0;
+        right: 0;
+        height: 160px;
+        background-size: contain !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        width: 100%;
+    }
+    .loginCarocelImgsTxt2{
+        bottom: 100px;
+        height: 50px;
+    }
+    .slidePrevSections{
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        font-weight: 500;
+        color: $buttonprimary;
+        z-index: 111;
+        i{
+            padding-right: 5px;
+            font-weight: 600;
+            font-size: 22px;
+            vertical-align: middle;
+        }
+        span{
+            vertical-align: middle;
+        }
+    }
+    .slideNextSections{
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        font-weight: 500;
+        color: $buttonprimary;
+        z-index: 111;
+        i{
+            padding-left: 5px;
+            font-weight: 600;
+            font-size: 22px;
+            vertical-align: middle;
+        }
+        span{
+            vertical-align: middle;
+        }
+    }
+    .closeIcons{
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 111;
+        color: #000;
+        font-size: 22px;
+        &:after{
+            position: absolute;
+            content: '';
+            left: 3px;
+            right: 3px;
+            top: 3px;
+            bottom: 3px;
+            background: #fff;
+            z-index: -1;
+            border-radius: 100%;
+        }
+    }
+}
+page-first-time-user-exp.ion-page{
+    background: #999;
+}
+
+page-first-time-user-exp ion-content.content-ios{
+    height: calc(100% - 25px);
+    margin-top: 20px;
+}
+page-first-time-user-exp ion-content.content-ios .closeIcons {
+    top: 25px;
+}
+
+/*07-11-2018 changes start*/
+page-first-time-user-exp {
+    .loginCarocelImgsTxt{
+        h2{
+            margin: 0;
+            text-align: center;
+            font-family: 'mostra_nuovaregular';
+            font-size: 35px;
+            line-height: 32px;
+            &.boldData{
+                font-family: 'mostra_nuovabold';
+                font-size: 50px;
+                line-height: 55px;
+            }
+        }
+        p{
+            margin: 0;
+            text-align: center;
+            /*font-family: 'mostra_nuovalight';*/
+            font-size: 14px;
+            padding-top: 15px;
+            /*font-weight: 600;*/
+        }
+    }
+}
+/*07-11-2018 changes end*/

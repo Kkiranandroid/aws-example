@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title class="dateinTitle">
+      <span class="headerCancelTxt" (click)="cancelButton();"><i class="fa fa-angle-left" aria-hidden="true"></i>Back</span>
+      <span class="alignMainHead2">Availability</span>
+      <!-- <span class="headerDoneTxt" *ngIf="isFrom !== 'profileScreen' && datelists.length > 0" (click)="isEditOrDoneMethod();">{{isEditOrDone}}</span> -->
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div *ngIf="datelists.length<=0" class="norecordsfound2">
+    <div class="norecordsfoundMain2">
+      <div class="norecordsfoundSub2">No records found</div>
+    </div>
+  </div>
+  <ion-list class="mainAvailables radioBtnMain filterSubRadio">
+    
+      <div *ngFor="let datelist of datelists; let i = index;" [className]="datelistLine" >
+      <ion-item-sliding>
+        <ion-item (click)="OnItemClickForScheduld(datelist)">
+          <ion-label>
+            <div class="dateSec">
+              <p>{{datelist.month}}</p><span>{{datelist.date}}</span></div>
+            <div class="dateSecSub">
+              <h1>{{datelist.city}}</h1>
+              <span>{{datelist.locations}}</span>
+              <p>{{datelist.fulldate}}</p>
+            </div>
+          </ion-label>
+          <ion-checkbox *ngIf="isEditOrDone=='Done'" value="test" checked={{datelist.isChecked}} (ionChange)="selectedCheckBox(datelist)"></ion-checkbox>
+        </ion-item>
+        <ion-item-options>
+          <button (click)="deleteSelectedItem(datelist);" ion-button color="light" icon-start>
+            <ion-icon name="ios-trash"></ion-icon>
+          </button>
+        </ion-item-options>
+        </ion-item-sliding>
+      </div>
+    
+  </ion-list>
+  <div class="addBtnClassDiv" (click)="goToCalenderPage()" *ngIf="isFrom !== 'profileScreen' && isEditOrDone == 'Edit'">
+    <button ion-button class="addBtnClass">
+      <ion-icon class="" name="md-add"></ion-icon>
+    </button>
+  </div>
+</ion-content>
+<!-- As of now we have not using this footer part -->
+<!-- <ion-footer>
+  <button ion-button full class="finishButton bluBtn" (click)="gotoHomePage()" *ngIf="isFrom == 'profileScreen'">Finish</button>
+  <ion-toolbar *ngIf="isFrom !== 'profileScreen' && isEditOrDone == 'Done'">
+    <ion-title>
+      <span class="headerCancelTxt" [style.color]="selectAllTextColor" (click)="selectAllButton();">{{selectAll}}</span>
+      <span class="headerDoneTxt fontweight400" [style.color]="deleteTextColor" (click)="deleteSelectedItem();">Delete</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer> -->

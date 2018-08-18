@@ -1,0 +1,220 @@
+settingsub {
+
+  .logoutAndDelete{
+      color: #FF1082;
+  }
+
+  .toolbar-title i {
+    line-height: 56px;
+  }
+  .contentPading .scroll-content {
+    padding: 16px 0px;
+  }
+  .pinkBtn,
+  .pinkBtn.activated {
+    background-color: #DB49D8;
+    border-radius: 6px;
+    font-weight: 400;
+    margin: 16px 0;
+    text-transform: capitalize;
+  }
+  .profileVisibleMsg {
+    margin-left: 15px;
+    font-size: 12px;
+  }
+  .demoClass {
+  margin-bottom: 12px !important;
+    ion-toggle{
+        margin-bottom: 12px !important;
+    }
+  }
+
+  .log-container {
+    margin: auto;
+    width: 96%;
+    height: 15%;
+    border: 1px solid black;
+    overflow-y: scroll;
+  }
+
+  .log-container span {
+    display: block;
+    width: 100%;
+  }
+  .card-heap[_nghost-c0]:nth-child(1) {
+    max-height: 100% !important;
+  }
+  .imgSize {
+    background-size: cover !important;
+    height: 100%;
+    width: 100%;
+    background-position: center !important;
+    position: relative;
+  }
+
+  .secondName {
+    padding-left: 3px;
+  }
+  .genderCls {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .genderCls2 {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .dateSection {
+    background: #e2e2e2;
+    border-radius: 4px;
+    float: left;
+    margin: 0 5px;
+  }
+  .dateSectionSub1 {
+    background: #fa7470;
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 4px 4px 0px 0px;
+  }
+  .dateSectionSub2 span {
+    color: #000;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .fullName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+  .dateSectionSub2 {
+    color: #000;
+    font-size: 12px;
+  }
+  .profileAddImgSec {
+    height: 100px;
+    width: 100px;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    position: relative;
+    i {
+      position: absolute;
+      right: -5px;
+      bottom: 0;
+      color: #ff0000;
+      font-size: 30px;
+      background: #fff;
+      padding: 1px 3px;
+      border-radius: 40px;
+      border: 1px solid #7F7F7F;
+    }
+  }
+  .clrChanges {
+    color: #DB49D8;
+    font-size: 26px;
+    padding-top: 4px;
+  }
+
+  .setingLabelTxt {
+    color: #000;
+    font-size: 14px;
+  }
+  .setingLabelTxt2 {
+    padding: 20px 0 10px 16px;
+  }
+  .setingRangeTxt {
+    padding: 10px 0 0 30px;
+  }
+  .rangeCng {
+    .range-bar {
+      background: #8D8D8D;
+      height: 4px;
+      top: 20px;
+    }
+    .range-bar.range-bar-active {
+      background: $buttonprimary;
+    }
+    .range-knob {
+      background: $buttonprimary;
+    }
+  }
+  .pinkBtnlftBtn {
+    width: 40%;
+    float: left;
+  }
+  .pinkBtnritBtn {
+    width: 40%;
+    float: right;
+  }
+  ion-item {
+    .item-inner {
+      border: 0 !important;
+    }
+  }
+  .radioBtnMain {
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    margin: 0;
+    .radio-md .radio-icon {
+      border-color: transparent;
+    }
+    .item-radio-checked {
+      background: #ccc;
+    }
+
+    .radio-md .radio-checked {
+      border-color: transparent;
+    }
+    .radio-md .radio-inner {
+      display: none;
+    }
+    .item-radio-checked.item-md ion-label {
+      color: #000;
+    }
+  }
+  .setingLabelTxtmargin0 {
+    margin-bottom: 0;
+  }
+
+  .secondDiv {
+    margin-top: 35px;
+  }
+
+  .firstDiv {
+    margin-top: 10px;
+  }
+}
+
+.remoreBorderBtm {
+  padding-bottom: 10px;
+  &:before {
+    display: none;
+  }
+  ion-toolbar {
+    .toolbar-background {
+      background-color: transparent;
+    }
+  }
+}
+
+.iframeLink {
+  height: 100%;
+  width: 100%;
+}
+
+.headerCancelTxt {
+  i {
+    font-size: 41px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -6px;
+    margin-left: -6px;
+    padding-right: 6px;
+  }
+}

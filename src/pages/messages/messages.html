@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>
+      <span class="headerCancelTxt" (click)="cancel()">Back</span>
+      <!-- <i class="fa fa-user-circle flotLft" aria-hidden="true" (click)="profilePage()"></i> -->
+      <!-- <span class="alignMainHead padingTop0" (click)="goBack()"> -->
+      <!-- <i class="fa fa-comment  bluSelect" aria-hidden="true"></i> -->
+      <span>
+         <!--<img class="externalImges" src="assets/imgs/conversation.blue.png">-->
+          <img class="externalImges" src="assets/icon/message-1/message_blue.png">
+      </span>
+      <!-- </span> -->
+      <!--  <span (click)="cancel()">DateIN</span>  -->
+      <!-- <i class="fa fa-comment flotRit flotBlack" aria-hidden="true"><span></span></i>  -->
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="contentPading">
+  <div class="msgFixedSec">
+    <!--  <div class="{{filterClick}}" (click)="goToFilter()"><ion-icon class="fa fa-calendar-o" aria-hidden="true"></ion-icon>Anytime<ion-icon name="ios-arrow-forward"></ion-icon></div>
+     -->
+    <div class="msgMain">
+      <h2 class="msgheading">My Matches<span *ngIf="newMatchesCount > 0">{{newMatchesCount}}</span></h2>
+      <!--  -->
+      <ion-scroll scrollX="true">
+        <div *ngIf="!isMatchesFound">
+          <!-- <div *ngIf="!noRecordsFoundForMatches" class="matchesNotFound loading">
+            <div class="norecordsfoundMain">
+              <i class="fa fa-spinner ion-loading-c" aria-hidden="true" style="margin-bottom: 30px;"></i>
+            </div>
+          </div> -->
+          <div *ngIf="!noRecordsFoundForMatches" class="loadRotate">
+            <div class="matchScroll">
+              <div class="matchScrollImg1" style="background-image:url(assets/imgs/messageLoad.png)"></div>
+            </div>
+            <div class="matchScroll">
+              <div class="matchScrollImg1" style="background-image:url(assets/imgs/messageLoad.png)"></div>
+            </div>
+            <div class="matchScroll">
+              <div class="matchScrollImg1" style="background-image:url(assets/imgs/messageLoad.png)"></div>
+            </div>
+            <div class="matchScroll">
+              <div class="matchScrollImg1" style="background-image:url(assets/imgs/messageLoad.png)"></div>
+            </div>
+            <div class="matchScroll">
+              <div class="matchScrollImg1" style="background-image:url(assets/imgs/messageLoad.png)"></div>
+            </div>
+          </div>
+          <!-- <div class="firstTimeUserExpPop">You can change later by using the Woowoo</div> -->
+          <div *ngIf="noRecordsFoundForMatches" class="noMatchesFound">No matches yet</div>
+        </div>
+        
+        <div *ngIf="isMatchesFound">
+          <div class="matchScroll" *ngFor="let matches of matcheslist;" (click)="createConversation(matches)">
+              <!-- [defaultImage]="defaultImage" [lazyLoad]="image.profilepic" [offset]="offset" -->
+            <!-- <div class="matchScrollImg1{{matches.isActive}}" [style.background]="'url(' + matches.jsonRespArray.person_image + ')'"> -->
+            <div class="matchScrollImg1{{matches.isActive}}" [defaultImage]="defaultImage" [lazyLoad]="matches.jsonRespArray.person_image" [offset]="offset">
+              <i class="thumbnailImges" style="background-image:url(assets/icon/plannow/plannow_blue.png)"></i>
+            </div>
+            <span>{{matches.jsonRespArray.person_name}}</span>
+          </div>
+        </div>
+
+        <div *ngIf="isFirstMatchesFound">
+          <div class="firstTimeMatch">Congratulations, your first match!!
+               <span>Tap on the match to start messaging!</span>
+          </div>
+        </div>
+
+      </ion-scroll>
+    </div>
+    <h2 class="msgheading msgheadingPading">Conversations<!-- <span>2</span> --></h2>
+  </div>
+  <div class="newMathchSectiom">
+    <div *ngIf="!isCovarsationFound">
+      <!-- <div *ngIf="!noRecordsFoundForCovarsation" class="norecordsfound loading">
+        <div class="norecordsfoundMain">
+          <i class="fa fa-spinner ion-loading-c" aria-hidden="true"></i>
+        </div>
+      </div> -->
+      <div *ngIf="!noRecordsFoundForCovarsation" class="loadRotate">
+        <div class="msgmainsection">
+          <div class="matchScrollImg2" style="background-image:url(assets/imgs/messageLoad.png)"></div>
+        </div>
+        <div class="msgmainsection">
+          <div class="matchScrollImg2" style="background-image:url(assets/imgs/messageLoad.png)"></div>
+        </div>
+        <div class="msgmainsection">
+          <div class="matchScrollImg2" style="background-image:url(assets/imgs/messageLoad.png)"></div>
+        </div>
+        <div class="msgmainsection">
+          <div class="matchScrollImg2" style="background-image:url(assets/imgs/messageLoad.png)"></div>
+        </div>
+        <div class="msgmainsection">
+          <div class="matchScrollImg2" style="background-image:url(assets/imgs/messageLoad.png)"></div>
+        </div>
+      </div>
+      <div *ngIf="noRecordsFoundForCovarsation" class="norecordsfound">
+        <div class="norecordsfoundMain">
+          <div class="norecordsfoundSub">No conversations yet</div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="isCovarsationFound">
+      <div class="msgmainsection " *ngFor="let conversion of conversionlist;" (click)="goToConversion(conversion)">
+          <!-- [defaultImage]="defaultImage" [lazyLoad]="image.profilepic" [offset]="offset" -->
+        <!-- <div class="matchScrollImg2" [style.background]="'url(' + conversion.person_image + ')'"> -->
+        <div class="matchScrollImg2" [defaultImage]="defaultImage" [lazyLoad]="conversion.person_image" [offset]="offset">
+          <i class="thumbnailImges" style="background-image:url(assets/icon/plannow/plannow_blue.png)"></i>
+        </div>
+        <div class="msgFullContent">
+          <p class="msgName">{{conversion.person_name}}</p>
+          <p class="msgContentLatestTxt" *ngIf="conversion.latest_text==='' || conversion.latest_text===null">{{'No convertasion'}}</p>
+          <p class="msgContent" *ngIf="conversion.latest_text!=='' || conversion.latest_text!==null">{{conversion.latest_text}}</p>
+          <span class="timeDat">
+            {{ getDatetime(conversion.last_chat_date) }}
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

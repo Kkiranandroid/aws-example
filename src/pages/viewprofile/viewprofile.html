@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title class="dateinTitle">
+      <span class="headerCancelTxt" (click)="closeIcon()"><i class="fa fa-angle-left" aria-hidden="true"></i>Back</span>
+      <img class="externalImges" src="assets/icon/user/user_blue.png" (click)="closeIcon()">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="sliderViewFixed">
+    <div class="sliderViewPageMain">
+      <ion-slides pager class="sliderViewPage">
+        <div *ngFor="let image of imagesArray">
+          <ion-slide>
+            <div class="insideSlideImg ng2-lazyloaded" [defaultImage]="defaultImage" [lazyLoad]="image.profilepic" [offset]="offset"></div>
+          </ion-slide>
+        </div>
+      </ion-slides>
+      <div class="headingName"><span class="foWeign600">{{myFullName}}, {{myAge}}</span></div>
+    </div>
+  </div>
+  
+  <div class="hiddenContent"></div>
+  <div class="viewProfileBtmContnt">
+    <div>{{bio}}</div>
+    <div class="marginTop16 fontWeight500">{{gender}} interested in {{interestedin}}</div>
+    <div class="marginTop16">
+      <span class="label">Location</span>
+      <span class="labelAnswer">{{selectedCity}} {{selectedLocation}}</span>
+    </div>
+    <div class="marginTop16">
+      <span class="label">Occupation</span>
+      <span class="labelAnswer">{{occupation}}</span>
+    </div>
+    <div class="marginTop16">
+      <span class="label">Education</span>
+      <span class="labelAnswer">{{education}}</span>
+    </div>
+  </div>
+</ion-content>

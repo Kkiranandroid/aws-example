@@ -1,0 +1,36 @@
+<!--
+<ion-header></ion-header>
+<ion-content>
+  <div class="verticalAlignMiddle">
+    <div class="verticalAlignMiddleChild">
+      <img src="assets/imgs/WoowooLogoRgb.png" class="loginImgAdded">
+    </div>
+  </div>
+  <div class="dIcon">
+  	<div><span>By logging in you agree to our</span></div>
+  	<div><span class="EULA" (click)="openPrivacyLikes('EULA')">EULA</span><span> and </span><span class="PrivacyPolicy" (click)="openPrivacyLikes('Privacy Policy')">Privacy Policy</span></div>
+    <button class="button-background bluBtn" ion-button (click)="loginFacebook();">Login with Facebook</button>
+  </div>
+</ion-content>
+-->
+<ion-content>
+    <div class="slideBgMainLogin" style="background-image:url(assets/imgs/bgMainLogin.png)"></div>
+    <ion-slides class="loginCarocel" pager>
+        <ion-slide>
+            <div style="background-image:url(assets/imgs/WoowooLogoRgb.png)" class="loginCarocelImgsTxt"></div>
+        </ion-slide>
+        <ion-slide>
+            <div style="background-image:url(assets/imgs/login2.png);position: absolute;right: 0;background-position: right !important;" class="loginCarocelImgs"></div>
+            <div style="background-image:url(assets/imgs/login22.png)" class="loginCarocelImgsTxt loginCarocelImgsTxt2"></div>
+        </ion-slide>
+        <ion-slide>
+            <div style="background-image:url(assets/imgs/login3.png)" class="loginCarocelImgs"></div>
+            <div style="background-image:url(assets/imgs/login33.png)" class="loginCarocelImgsTxt loginCarocelImgsTxt2"></div>
+        </ion-slide>
+        <ion-slide>
+            <div style="background-image:url(assets/imgs/login4.png)" class="loginCarocelImgs"></div>
+            <div style="background-image:url(assets/imgs/login44.png)" class="loginCarocelImgsTxt loginCarocelImgsTxt2"></div>
+        </ion-slide>
+    </ion-slides>
+    <button class="button-background bluBtn loginBtnChanges" ion-button (click)="loginFacebook(0)"><i class="fa fa-facebook-square" aria-hidden="true"></i>Continue with Facebook</button><!--(click)="loginFacebook();"--> 
+</ion-content>

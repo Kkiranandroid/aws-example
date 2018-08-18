@@ -1,0 +1,363 @@
+<ion-header class="{{outNowClassHead}}">
+  <!-- class="outNowClassHead" -->
+  <ion-navbar>
+    <ion-title>
+      <!-- <i class="fa fa-user-circle flotLft {{toolBarIconColor}}" aria-hidden="true" (click)="profilePage()"></i> -->
+      <img class="externalImges flotLft" src="assets/icon/user/user_black.png" (click)="profilePage()">
+      <div class="logoImageLatestMain"><!-- (click)="gotoFilter()" -->
+        <div class="logoImageLatest"></div>
+      </div>
+      <!-- <i class="fa fa-comment flotRit {{toolBarIconColorMsg}}" aria-hidden="true" (click)="messagePage()"><span></span></i> -->
+      <div *ngIf="toolBarIconColor=='flotBlack'">
+        <img *ngIf="!isNewMatchesFound" class="externalImges externalImgesRight" src="assets/icon/message-1/message_black.png" (click)="messagePage()">
+        <img *ngIf="isNewMatchesFound" class="externalImges externalImgesRight" src="assets/icon/message-2/message_blue.png" (click)="messagePage()">
+        
+      </div>
+      <div *ngIf="toolBarIconColor!='flotBlack'">
+        <img class="externalImges externalImgesRight outNowStionRmImgs" src="assets/icon/message-1/message_black.png" (click)="messagePage()">
+        <img class="externalImges externalImgesRight outNowStionImgs" src="assets/icon/message-1/message_blue.png" (click)="messagePage()">
+        <span></span>
+      </div>
+      <!--  {{toolBarIconColorMsg}}
+        <i class="fa fa-comment {{flotRit}}" aria-hidden="true"><span></span></i>
+      -->
+      <div class="filterLatestIcon" style="display: none;">
+        <i *ngIf="showFilter" class="fa fa-caret-down" (click)="gotoFilter()" aria-hidden="true"></i>
+        <!--            <i *ngIf="dateValue!=='undefined'" class="outNowSec fa fa-caret-down" (click)="gotoFilter()" aria-hidden="true"></i> -->
+        <i *ngIf="!showFilter" class="fa fa-caret-down outNowSec" (click)="gotoFilter()" aria-hidden="true"></i>
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<div class="messagePopover iosmessagePopover" showWhen="ios" *ngIf="isNewMatchesFound" (click)="messagePage()">You have a new match!
+  <span>Go to your messages and start chatting!</span>
+</div>
+<div class="messagePopover" showWhen="android" *ngIf="isNewMatchesFound" (click)="messagePage()">You have a new match!
+  <span>Go to your messages and start chatting!</span>
+</div>
+
+<ion-content class="{{outNowClass}}" id="page-content">
+  <!-- class="outNowClass" -->
+  <div class="filterClick" style="display: none;" (click)="gotoFilter()">
+    <ion-icon class="fa fa-calendar-o" aria-hidden="true"></ion-icon>
+    <span *ngIf="isFromPage!=='OutNow' && dateValue === undefined" class="{{anyTimeTextColor}}">All Dates</span>
+    <span *ngIf="dateValue!=='undefined'" class="{{anyTimeTextColor}}">{{dateValue}}</span>
+    <span *ngIf="isFromPage==='OutNow' && dateValue === undefined" class="outNowSec">out now</span>
+    <ion-icon name="ios-arrow-forward"></ion-icon>
+  </div>
+
+  <div *ngIf="isCardsLoading" class="norecordsfound2 localClass">
+    <!-- <h6 class="cardLoadingmsg">Fetching Cards....</h6> -->
+    <div class="norecordsfoundMain2 ">
+      <div class="norecordsfoundSub2">
+        <div class="noAnimate "><!-- addAnimate -->
+          <img class="cardLoading" src="assets/imgs/loading_2.gif">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="isProfileOn" id="swipe-main" class="swipe-hidedetails">
+    <div id="swipe-cards">
+      <ul>
+        <li id="swipe-card1" (touchmove)="dragMoved($event)" (touchstart)="dragStarted($event)" (touchend)="dragFinished($event)">
+          <div class="swipe-main-image" id="swipe-main-image-1"></div>
+          <div class="swipe-main-image" id="swipe-main-image-2"></div>
+          <div class="swipe-main-image" id="swipe-main-image-3"></div>
+          <div class="swipe-main-image" id="swipe-main-image-4"></div>
+          <div class="swipe-main-image" id="swipe-main-image-5"></div>
+          <div class="swipe-main-image" id="swipe-main-image-6"></div>
+          <div id="swipe-main-breadcrumbs"></div>
+          <!-- <div id="swipe-sign-left">Boo</div>
+          <div id="swipe-sign-right">Woo</div> -->
+          <div id="swipe-sign-left"><span style="background-image:url(assets/imgs/boo.png)"></span></div>
+          <div id="swipe-sign-right"><span style="background-image:url(assets/imgs/woo.png)"></span></div>
+          <div class="onlineIndicator"><div></div></div>
+          <div *ngIf="!isCardsLoading" id="swipe-info">
+            <img id="swipe-info-icon" src="{{modeOfCurrentPersonImg}}">
+          </div>
+          <div id="swipe-notes" class="swipe-cardnotes"></div>
+          <div id="swipe-details-arrow">
+            <ion-icon id="swipe-details-arrow-icon" name="md-close"></ion-icon>
+          </div>
+        </li>
+
+        <li id="swipe-card2">
+          <div class="swipe-main-image" id="swipe-next-image"></div>
+          <div id="swipe-next-breadcrumbs"></div>
+          <div class="onlineIndicator"><div></div></div>
+          <div id="swipe-next-notes" class="swipe-cardnotes"></div>
+          <div id="swipe-next-info">
+            <img id="swipe-next-info-icon" src="{{modeOfNextPersonImg}}">
+          </div>
+        </li>
+
+        <li id="swipe-no-matches">
+          <div class="norecordsfound2 norecordsfoundSections">
+            <div style="background-image: url(assets/imgs/noMorePic.png)" class="noRecordImgSections newChangesimgSections"></div>
+            <!--  <h6 class="profileoffmsg">Add more dates to see more available people who want to date or increase your distance in settings</h6> -->
+            <h4 class="profileoffmsg">You're all out!<span>Use 'Expand Your Settings' or change mode</span></h4>
+            <div class="multiButtonNRFChange">
+              <button ion-button class="bluBtn btnMarginBtm12" (click)="goToSetting()">Expand Your Settings</button>
+              <!-- <button ion-button class="bluBtn" (click)="goToCalenderPage()">Add more dates</button> -->
+            </div>
+
+            <!-- 
+            //*******This code is for Refresh button******\
+            <div *ngIf="isFabShowing">
+              <div [className]="rotateClass">
+              <img class="refresh" (click)="clickRefreshIcon()" src="assets/imgs/refresh_1.png">
+              </div>
+              <p>{{refreshMsg}}</p>
+            </div> -->
+
+          </div>
+          <!-- <div *ngIf="noConnection">
+            <h6 class="profileoffmsg">We are having trouble getting data at the moment</h6>
+            <div class="multiButtonNRF">
+              <button ion-button class="bluBtn" (click)="retryMatches()">Retry</button>
+            </div>
+          </div> -->
+        </li>
+      </ul>
+    </div>
+    <div id="person-details">
+      <div id="person-data"></div>
+      <!-- <button ion-button class="bluBtn" (click)="myLocation()">Report this person</button> -->
+      <button (click)="reportAbuseClick()" class='button-background bluBtn btnAlignmentReport' ion-button>Report User</button>
+      <!-- displaying the Instgram pictures START -->
+      <div class="msgMain" style="position:relative;">
+        <div class="matchScroll" *ngFor="let image of InstagramImages; let i = index">
+          <div *ngIf="image.images.standard_resolution.url!==''" class="matchScrollImg1" (click)="openModalDisplayInstagramPhotos(i)">
+            <img class="matchScrollImg1" [defaultImage]="image.images.thumbnail.url" [lazyLoad]="image.images.standard_resolution.url" [offset]="offset">
+          </div>
+        </div>
+      </div>
+      <!-- displaying the Instgram pictures END -->
+    </div>
+  </div>
+  <div *ngIf="!isProfileOn" class="norecordsfound2 norecordsfoundSections norecordsfoundSections2">
+    <div class="norecordsfoundMain2">
+      <div style="background-image: url(assets/imgs/Ftue/ftui5.png)" class="noRecordImgSections profileHidewidth225"></div>
+      <div class="norecordsfoundSub2 {{outNowClassIsProfileOn}}">
+        <!-- <h5 class="profileoffmsg">Your WooWoo profile is hidden</h5> -->
+        <h5 class="profileoffmsg">Your WooWoo profile is hidden.<span> Unhide your profile to see other people</span></h5>
+        <button ion-button class="bluBtn" (click)="goToSetting('ProfileTurnOn')">Unhide Profile</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="noMatchesFound" class="norecordsfound2">
+    <div class="norecordsfoundMain2">
+      <div class="norecordsfoundSub2 {{outNowClassIsProfileOn}}">
+        <!-- No matches found -->
+        <h6 class="profileoffmsg">Add more dates to see more available people who want to date or increase your distance in settings</h6>
+        <div class="multiButtonNRF">
+          <button ion-button class="bluBtn" (click)="goToSetting()">Increase distance</button>
+          <button ion-button class="bluBtn" (click)="myLocation()">Add more dates</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="hideBg"></div> -->
+</ion-content>
+<div [className]="dateSwipeBtm">
+  <ion-icon name="md-close-circle" class="closeIcon" (click)="closeTransitionBtm()"></ion-icon>
+  <div class="btmHomeInside">
+    <div class="subSectionName subpaddingSection1">{{Matches_Username}}, {{Matches_Age}}</div>
+    <div class="subSectionJob subpaddingSection2">{{Matches_Occupation}}</div>
+    <div class="subSectionEdu subpaddingSection2">{{Matches_Education}}</div>
+    <div class="subSectionEdu subpaddingSection2">{{Matches_Bio}}</div>
+  </div>
+</div>
+
+<!--new changes-->
+<!-- <div class="matchesSwipe" [style.display]="matchesSwipe1">
+    <h3>Match!</h3>
+    <div class="matchesSwipeDiv">
+      <span (click)="messagePage()"><i class="fa fa-comment-o" aria-hidden="true"></i>Chat</span>
+      <span (click)="closeMatch()"><ion-icon name="md-checkmark"></ion-icon>Keep Swiping</span>
+    </div>
+  </div> -->
+<!--new changes end-->
+<!--new changes-->
+
+<div class="matchesSwipe" [style.display]="matchesSwipe1">
+  <div class="headerTxt" style="background-image:url(assets/imgs/matchTxt.png)"></div>
+  <div class="headerImg">
+    <!-- <div class="headerImgSub1" style="background-image:url('assets/imgs/profile2.jpg')"></div>
+        <div class="headerImgSub2" style="background-image:url(assets/imgs/profile5.jpg)"></div> -->
+    <div class="headerImgSub1" [style.backgroundImage]="'url(' + myProfileImage + ')'"></div>
+    <div class="headerImgSub2" [style.backgroundImage]="'url(' + matchedProfileImage + ')'"></div>
+    <!-- <div class="headerImgSub2" [defaultImage]="defaultImage" [lazyLoad]="matchedProfileImage" [offset]="offset"></div> -->
+  </div>
+  <div class="matchesSwipeDiv1">
+    <!--<span (click)="messagePage()"><i class="fa fa-comment-o" aria-hidden="true"></i>Chat</span>
+      <span (click)="closeMatch()"><ion-icon name="md-checkmark"></ion-icon>Keep Swiping</span>-->
+    <button ion-button class="bluBtn bluBtnWhite" (click)="messagePage()">Send a message</button>
+    <button ion-button class="bluBtn" (click)="closeMatch()">Keep swiping</button>
+  </div>
+</div>
+<!--new changes end-->
+<!--<div class="dIcon"><span class="dIconInner">D</span></div>-->
+<div class="alignInstagramdesign" *ngIf="isFabShowing">
+  <div class="alignInstagramdesignImgs" *ngIf="isFabShowing && isShowInstagramIcon && isProfileOn">
+    <img class="instaIconFab" src="assets/imgs/instagram_icon.png">
+  </div>
+  <ion-fab center bottom class="fabSection" (click)="openFabMenu()" *ngIf="isFabShowing" #fab>
+    <button ion-fab color="danger" class="fabSectionSub">
+      <span class="dIconInner dIconInnerMain">
+        <span class="dIconInnerSub"></span>
+      <!-- <span class="dIconInnerSubActive">
+          <ion-icon name="md-close" class="iconCloses"></ion-icon>
+        </span> -->
+      </span>
+    </button>
+
+    <!-- <ion-fab-list side="left">
+      <div class="backDropFab" (click)="closeFab(fab)"></div>
+      <button ion-fab color="primary" (click)="gotoDatelist(fab)">
+        <span class="imgCladr" style="background-image:url(assets/imgs/calendar.blue.png)"></span>
+      </button>
+      <div class="fabBtnTxt fab-md-in-list">Set my availability</div>
+    </ion-fab-list>
+    <ion-fab-list side="right">
+      <button ion-fab color="secondary" (click)="gotoOutnow(fab)">
+        <span class="imgCladr" style="background-image:url(assets/imgs/rocket.blue.png)"></span>
+      </button>
+      <div class="fabBtnTxt fab-md-in-list">{{outNowLabel}}</div>
+    </ion-fab-list> -->
+
+  </ion-fab>
+</div>
+
+
+<!-- Fab menu items(on click of W icon) START -->
+<div [className]="fabMenu1" style="z-index: 115;">
+    <div class="firstTimeUserExpSub">
+      <div class="firstTimeUserExpTop1" (click)="confirmAlert()">
+        <div style="background-image: url(assets/imgs/ftuiHome1.png);" class="firstTimeUserExpTop1img1"></div>
+      </div>
+      <div class="firstTimeUserExpTop2">
+        <div style="background-image: url(assets/imgs/ftuiHome2.png);" class="firstTimeUserExpTop1img2" (tap)="clickOn('chatnow')"></div>
+        <div style="background-image: url(assets/imgs/ftuiHome3.png);" class="firstTimeUserExpTop1img2" (tap)="clickOn('outnow')"></div>
+        <div style="background-image: url(assets/imgs/ftuiHome4.png);" class="firstTimeUserExpTop1img2" (tap)="clickOn('plannow')"></div>
+      </div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner1" style="background-image: url(assets/imgs/fiuiHomeSide2.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner2" style="background-image: url(assets/imgs/fiuiHomeSide.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner3" style="background-image: url(assets/imgs/fiuiHomeSide2.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner4" style="background-image: url(assets/imgs/fiuiHomeSide.png);"></div>
+    </div>
+<!--<div class="firstTimeUserExpPop">You can change later by using the WooWoo button at the bottom of the screen</div> -->
+    <div class="alignInstagramdesign" (click)="closeFTUE()">
+      <ion-fab center bottom class="fabSection">
+        <button ion-fab color="danger" class="fabSectionSub">
+          <span class="dIconInner dIconInnerMain dIconInnerMainPurpole">
+            <span class="dIconInnerSub"></span>
+        <!-- <span class="dIconInnerSub" style="background-image: url(assets/imgs/WoowooIconclose.png); width:30px; height:30px;margin:20px;"></span> -->
+          </span>
+        </button>
+      </ion-fab>
+    </div>
+  </div>
+<!-- Fab menu items(on click of W icon) END -->
+
+
+<!-- first time user exp -->
+<div class="mainFirstTimeUserExp" *ngIf="firstTimeuserExp==true || firstTimeuserExp=='true'">
+  <div [className]="firstTimeUserExp">
+    <div class="firstTimeUserExpSub">
+      <div class="firstTimeUserExpTop1">
+        <div style="background-image: url(assets/imgs/ftuiHome1.png);" class="firstTimeUserExpTop1img1"></div>
+      </div>
+      <div class="firstTimeUserExpTop2">
+        <div style="background-image: url(assets/imgs/ftuiHome2.png);" class="firstTimeUserExpTop1img2" (click)="firstTimeUserExpClick('chatnow')"></div>
+        <div style="background-image: url(assets/imgs/ftuiHome3.png);" class="firstTimeUserExpTop1img2" (click)="firstTimeUserExpClick('outnow')"></div>
+        <div style="background-image: url(assets/imgs/ftuiHome4.png);" class="firstTimeUserExpTop1img2" (click)="firstTimeUserExpClick('plannow')"></div>
+      </div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner1" style="background-image: url(assets/imgs/fiuiHomeSide2.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner2" style="background-image: url(assets/imgs/fiuiHomeSide.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner3" style="background-image: url(assets/imgs/fiuiHomeSide2.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner4" style="background-image: url(assets/imgs/fiuiHomeSide.png);"></div>
+    </div>
+    <div class="firstTimeUserExpPop">You can change later by using the WooWoo button at the bottom of the screen</div>
+    <div class="alignInstagramdesign">
+      <ion-fab center bottom class="fabSection">
+        <button ion-fab color="danger" class="fabSectionSub">
+          <span class="dIconInner dIconInnerMain dIconInnerMainPurpole">
+           <span class="dIconInnerSub"></span>
+          </span>
+        </button>
+      </ion-fab>
+    </div>
+  </div>
+  <div [className]="firstTimeUserExp2" (click)="firstTimeUserExpClick2()">
+    <div style="background-image: url(assets/imgs/infoSection.png);" class="firstTimeUserExp2Imgs firstTimeUserExp3Imgs"></div>
+  </div>
+  <div [className]="firstTimeUserExp3" (click)="firstTimeUserExpClick3()">
+    <div style="background-image: url(assets/imgs/infoSection2.png);" class="firstTimeUserExp2Imgs firstTimeUserExp3Imgs"></div>
+  </div>
+  <div [className]="firstTimeUserExp31" (click)="firstTimeUserExpClick31()">
+    <div style="background-image: url(assets/imgs/infoSection21.png);" class="firstTimeUserExp2Imgs firstTimeUserExp3Imgs"></div>
+</div>
+  <div [className]="firstTimeUserExp4">
+    <div class="firstTimeUserExpSub">
+      <div class="firstTimeUserExpTop1 firstTimeUserExpTop4">
+        <div style="background-image: url(assets/imgs/infoSection3.png);" class="firstTimeUserExpTop1img4"></div>
+      </div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner1" style="background-image: url(assets/imgs/fiuiHomeSide2.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner2" style="background-image: url(assets/imgs/fiuiHomeSide.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner3" style="background-image: url(assets/imgs/fiuiHomeSide2.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner4" style="background-image: url(assets/imgs/fiuiHomeSide.png);"></div>
+    </div>
+    <div class="alignInstagramdesign">
+      <ion-fab center bottom class="fabSection" (click)="firstTimeUserExpClick4()">
+        <button ion-fab color="danger" class="fabSectionSub">
+          <span class="dIconInner dIconInnerMain dIconInnerMainPurpole">
+        <span class="dIconInnerSub" style="background-image: url(assets/imgs/WoowooTics.png);width: 33px;height: 33px;margin: 18px;"></span>
+          </span>
+        </button>
+      </ion-fab>
+    </div>
+  </div>
+</div>
+<!-- first time user exp end -->
+
+<!-- User report popover code START -->
+<div [className]="reportAbuse">
+    <div class="firstTimeUserExpSub reportAbuse">
+        <div class="reportAbuseHeader">
+            Report User
+        </div>
+      <ion-list radio-group [(ngModel)]="reportSection" (change)="ionChange()" class="radioReportUser" id="scrollDiv">
+          <ion-item>
+              <ion-label>Feels like spam</ion-label>
+              <ion-radio value="cord" (ionSelect)="ionChange('Feels like spam')"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>Inappropiate photo or profile</ion-label>
+              <ion-radio value="duesenberg" (ionSelect)="ionChange('Inappropiate photo or profile')"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>Offensive online behaviour</ion-label>
+              <ion-radio value="hudson" (ionSelect)="ionChange('Offensive online behaviour')"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>Offensive offline behaviour</ion-label>
+              <ion-radio value="packard" (ionSelect)="ionChange('Offensive offline behaviour')"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>Other</ion-label>
+              <ion-radio value="studebaker" (ionSelect)="ionChange('Other')"></ion-radio>
+          </ion-item>
+          <ion-item *ngIf="reportNow" class="reportNowCls">
+              <ion-textarea (ionFocus)="checkFocus()" (ionBlur)="checkUnFocus()" [(ngModel)]="description" name="description" placeholder="Enter Description" rows="5" cols="4"></ion-textarea>
+          </ion-item>
+        </ion-list>
+        <div class="reportAbuseBtn">
+            <button ion-button (click)="reportUserButtonClicked()">Report</button>
+            <button ion-button (click)="reportAbuseClose()">Cancel</button>
+        </div>
+    </div>
+</div>
+<!-- User report popover code END-->

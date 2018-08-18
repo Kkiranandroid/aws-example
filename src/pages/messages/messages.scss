@@ -1,0 +1,608 @@
+messages {
+
+.noMatchesFound {
+    line-height: 85px;
+    color: #8F8F94;
+    text-align: center;
+    margin-right: 16px;
+}
+    .firstTimeUserExpPop {
+        position: absolute;
+        bottom: 25px;
+        left: 47px;
+        right: 0px;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1111;
+        color: #fff;
+        width: calc(100% - 50px);
+        margin: auto;
+        text-align: center;
+        padding: 25px;
+        border-radius: 10px;
+    }
+    /*.firstTimeUserExpPop:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid rgba(0, 0, 0, 0.8);
+        position: absolute;
+        left: 8px;
+        right: 0;
+        margin: auto;
+        bottom: -9px;
+    }*/
+
+
+
+    .contentPading .scroll-content {
+        padding: 0px;
+    }
+
+    .content-ios {
+      .scroll-content {
+          -webkit-overflow-scrolling: auto !important;
+      }
+      ion-scroll{
+        .scroll-content{
+            -webkit-overflow-scrolling: touch !important;
+        }
+      }
+    }
+
+    .pinkBtn,
+    .pinkBtn.activated {
+        background-color: #DB49D8;
+        border-radius: 6px;
+        font-weight: 400;
+        margin: 16px 0;
+        text-transform: capitalize;
+    }
+    .log-container {
+        margin: auto;
+        width: 96%;
+        height: 15%;
+        border: 1px solid black;
+        overflow-y: scroll;
+    }
+    .log-container span {
+        display: block;
+        width: 100%;
+    }
+    .card-heap[_nghost-c0]:nth-child(1) {
+        max-height: 100% !important;
+    }
+    .imgSize {
+        background-size: cover !important;
+        height: 100%;
+        width: 100%;
+        background-position: center !important;
+        position: relative;
+    }
+    .secondName {
+        padding-left: 3px;
+    }
+    .genderCls {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .genderCls2 {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .dateSection {
+        background: #e2e2e2;
+        border-radius: 4px;
+        float: left;
+        margin: 0 5px;
+    }
+    .dateSectionSub1 {
+        background: #fa7470;
+        color: #fff;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 4px 4px 0px 0px;
+    }
+    .dateSectionSub2 span {
+        color: #000;
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+    }
+    .fullName {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+    }
+    .dateSectionSub2 {
+        color: #000;
+        font-size: 12px;
+    }
+    .profileAddImgSec {
+        height: 100px;
+        width: 100px;
+        background-position: center;
+        background-size: cover;
+        margin: auto;
+        position: relative;
+        i {
+            position: absolute;
+            right: -5px;
+            bottom: 0;
+            color: #ff0000;
+            font-size: 30px;
+            background: #fff;
+            padding: 1px 3px;
+            border-radius: 40px;
+            border: 1px solid #7F7F7F;
+        }
+    }
+    .clrChanges {
+        color: #DB49D8;
+        font-size: 26px;
+        padding-top: 4px;
+    }
+    .setingLabelTxt {
+        color: #999;
+        font-size: 14px;
+    }
+    .setingLabelTxt2 {
+        padding: 20px 0 10px 16px;
+    }
+    .setingRangeTxt {
+        padding: 10px 0 0 30px;
+    }
+    .rangeCng {
+        .range-bar {
+            background: #8D8D8D;
+            height: 4px;
+            top: 20px;
+        }
+        .range-bar.range-bar-active {
+            background: #715696;
+        }
+        .range-knob {
+            background: #715696;
+        }
+    }
+    .pinkBtnlftBtn {
+        width: 40%;
+        float: left;
+    }
+    .pinkBtnritBtn {
+        width: 40%;
+        float: right;
+    }
+    ion-item {
+        .item-inner {
+            border: 0;
+        }
+    }
+    .setingLabelTxtmargin0 {
+        margin-bottom: 0;
+    }
+    .border0 {
+        .item-inner {
+            border: 0 !important;
+        }
+    }
+    
+     
+    .msgMain{
+        padding: 0 10px;
+        ion-scroll {
+            white-space: nowrap;
+            height: 100px;
+            border-bottom: 0px solid #e2e2e2;
+        }
+        .matchScroll{
+            display: inline-block;
+            text-align: center;
+            margin: 0 5px;
+            span{
+                width: 65px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: block;
+                padding-top: 5px;
+                font-size: 12px;
+            }
+        }
+    }
+    .msgheading{
+        font-size: 22px;
+        margin-top: 0px;
+    }
+    .matchScrollImg1{
+        height: 65px;
+        width: 65px;
+        background-size: cover !important;
+        background-position: center !important;
+        border-radius: 100px;
+        margin: 0 auto;
+    }
+    
+    .matchScrollImg2 {
+        height: 60px;
+        width: 60px;
+        background-size: cover !important;
+        background-position: center !important;
+        border-radius: 100px;
+        float: left;
+    }
+    .msgName, .msgContent{
+        margin: 0;
+    }
+    .msgName {
+        font-weight: 600;
+        font-size: 17px;
+    }
+    .msgContent {
+        color: #aaaaaa;
+        font-size: 15px !important;
+        overflow: hidden;
+        padding-right: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .msgContentLatestTxt, .msgContent{
+       color: #D2D2D2;
+    }
+    .msgFullContent{
+        float: right;
+        width: calc(100% - 60px);
+        padding: 0 10px;
+    }
+    .dateSectionMsg{
+        margin: 0; 
+    }
+    .msgmainsection {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        padding-left: 13px;
+        padding-right: 10px;
+        border-bottom: 0px solid #e2e2e2;
+        padding-top: 10px;
+        padding-bottom: 2px;
+        margin-bottom: 10px;
+        margin-top: -4px;
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            left: 73px;
+            right: 0;
+            height: 1px;
+            background: #e2e2e2;
+            bottom: -10px;
+        }
+    }
+    .msgmainsection:last-child{
+        border: 0;
+    }
+    .contentInfoSub2{
+        position: absolute;
+        right: 10px;
+        top: 19px;
+    }
+    .msgheadingPading{
+        padding: 0 16px;
+    }
+    
+    
+    
+    /*29-1-18*/
+    .toolbar-title i {
+        line-height: 56px;
+        &:last-child{
+            color: $buttonprimary;
+            position: relative;
+            span{
+                position: absolute;
+                top: 12px;
+                right: -2px;
+                width: 8px;
+                height: 8px;
+                background-color: #53D769;
+                border-radius: 50%;
+            }
+        }
+    }
+    .toolbar-title {
+        font-family: baloo_bhainaregular;
+        font-weight: 500;
+        line-height: 56px;
+        font-size: 27px;
+        color: #000;
+    }
+    .msgheading{
+        span{
+            background: #FF1082;
+            color: #ffffff;
+            font-size: 14px;
+            text-align: center;
+            margin-left: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 3px 7px;
+        }
+    }
+    
+    
+    .filterClick {
+        background: #EFEFF4;
+        margin: 10px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    .filterClickIos{
+        background: #EFEFF4;
+        margin: 10px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    .filterClick{
+        position: relative;
+        margin-top: 5px;
+        min-height: 33px;
+        ion-icon{
+            font-size: 16px;
+        }
+        ion-icon:first-child{
+            color: $buttonprimary;
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            line-height: 33px;
+        }
+        ion-icon:last-child{
+            color: #CBD5E4;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            bottom: 0;
+            line-height: 33px;
+            font-size: 24px;
+        }
+    }
+    .filterClickIos{
+        position: relative;
+        margin-top: 15px;
+        min-height: 33px;
+        ion-icon{
+            font-size: 16px;
+        }
+        ion-icon:first-child{
+            color: $buttonprimary;
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            line-height: 33px;
+        }
+        ion-icon:last-child{
+            color: #CBD5E4;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            bottom: 0;
+            line-height: 33px;
+            font-size: 24px;
+        }
+    }
+    .matchScroll{
+            span{
+                font-size: 14px;
+                 }
+        }
+    .matchScrollImg1.active {
+        border: 2px solid #53D769;
+        position: relative;
+    }
+    .matchScrollImg1.active:before {
+        content: '';
+        border: 1.5px solid #fff;
+        left: 0;
+        top: 0;
+        padding: 3px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-radius: 30px;
+    }
+    .msgMain{
+        padding: 0 16px;
+        padding-right: 0;
+    }
+    /*29-1-18*/
+    /*30-1-18*/
+    .msgmainsection.active{
+        .matchScrollImg2{
+            position: relative;
+            border: 1.5px solid #53D769;
+            &:after{
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                border: 1px solid #fff;
+                border-radius: 50%;
+            }
+        }
+        .msgFullContent{
+            .msgContent{
+                color: #000;
+            }
+        }
+    }
+    .msgFullContent{
+        position: relative;
+        .timeDat{
+            position: absolute;
+            right: 0;
+            top: 2px;
+            color: #8F8F94;
+            i{
+                padding-left: 9px;
+                color: #C7C7CC; 
+                font-size: 19px;
+                font-weight: 500;
+                vertical-align: bottom;
+            }
+        }
+        .msgName{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-right: 75px;
+        }
+        .msgContent{
+            color: #8F8F94;
+            padding-top: 5px;
+        }
+    }
+    .msgFixedSec{
+        position: fixed;
+        top: 56px;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        z-index: 111;
+    }
+    .newMathchSectiom{
+        margin-top: 250px;
+    }
+    /*30-1-18*/
+
+
+    .ion-spin, .ion-loading-a, .ion-loading-b, .ion-loading-c, .ion-loading-d, .ion-looping, .ion-refreshing, .ion-ios7-reloading { -webkit-animation: spin 1s infinite linear; -moz-animation: spin 1s infinite linear; -o-animation: spin 1s infinite linear; animation: spin 1s infinite linear; }
+
+    @-moz-keyframes spin { 0% { -moz-transform: rotate(0deg); }
+      100% { -moz-transform: rotate(359deg); } }
+    @-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(359deg); } }
+    @-o-keyframes spin { 0% { -o-transform: rotate(0deg); }
+      100% { -o-transform: rotate(359deg); } }
+    @-ms-keyframes spin { 0% { -ms-transform: rotate(0deg); }
+      100% { -ms-transform: rotate(359deg); } }
+    @keyframes spin { 0% { transform: rotate(0deg); }
+      100% { transform: rotate(359deg); } }
+
+
+    .norecordsfound {
+        display: table;
+        width: 100%;
+        height: calc(100vh - 370px);
+    }
+
+    .matchesNotFound {
+        display: table;
+        width: 100%;
+        height: calc(100vh - 460px);
+        .norecordsfoundMain{
+            text-align: center;
+            font-size: 30px;
+        }
+    }
+
+    .norecordsfoundMain {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .norecordsfoundSub {
+        visibility: visible !important;
+        text-align: center;
+        color: #999;
+    }
+
+
+
+    .msgMain .matchScroll{
+        width: auto;
+        .matchScrollImg1{
+            position: relative;
+        }
+    }
+    .newMathchSectiom {
+        margin-top: 180px;
+    }
+    .thumbnailImges{
+        display: block;
+        margin: auto;
+        position: absolute;
+        right: -4px;
+        bottom: -3px;
+        background-position: center !important;
+        background-size: 75% 75%;
+        background-color: #fff;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid #C0C0C0;
+        background-repeat: no-repeat;
+    }
+    .matchScrollImg1.active {
+        border: 2px solid #FF1082; 
+    }
+    .msgmainsection.active .matchScrollImg2 {
+        border: 1.5px solid #FF1082;
+    }
+    .matchScrollImg2{
+        position: relative;
+        border: 1px solid #E5E5E5;
+    }
+    .msgmainsection:after {
+        left: 85px;
+    }
+    .msgmainsection:last-child:after {
+        display: none;
+    }
+    /*06-26-2018 changes*/
+
+    .loadRotate{
+        .matchScrollImg1, .matchScrollImg2{
+            -webkit-animation: rotation 2s infinite linear;
+        }  
+    }
+    @-webkit-keyframes rotation {
+        from {
+                -webkit-transform: rotate(0deg);
+        }
+        to {
+                -webkit-transform: rotate(359deg);
+        }
+    }
+
+    .content-ios{
+        .msgMain{
+            .msgheading{
+                margin-top: 1.8rem;
+            }
+        }
+    }
+
+}
+
+
+.noMatchesFound {
+    line-height: 100px;
+    color: #8F8F94;
+    text-align: center;
+    margin-right: 25px;
+}

@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title class="dateinTitle">
+      
+      <!-- <span class="headerCancelTxt fontSize27" (click)="goBack()"><i class="fa fa-user-circle  clrBlack" aria-hidden="true"></i></span> -->
+
+      <!-- <div class="logoImageLatestMain">
+        <div class="logoImageLatest"></div>
+      </div> -->
+
+      <!-- <span class="alignMainHead padingTop0"> -->
+        <!-- <i class="fa fa-user-circle  bluSelect" aria-hidden="true"></i> -->
+        <img class="externalImges" src="assets/icon/user/user_blue.png">
+      <!-- </span> -->
+      
+      <!-- <i class="fa fa-comment alignRitIcons {{toolBarIconColorMsg}}" aria-hidden="true" (click)="messagePage();"><span></span></i> -->
+      <span class="headerDoneTxt" (click)="goBack()">Back</span>
+      <!-- <div>
+        <img class="externalImges externalImgesRight" src="assets/imgs/conversation.black.png" (click)="messagePage()">
+        <span></span>
+      </div> -->
+
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="proFileNewChanhes">
+        <div class="ng2-lazyloaded profileAddImgSec2"  [style.background]="'url(' + profilepic + ')'" (click)="goToViewProfileCard()"></div>
+        
+        <!-- <div class="ng2-lazyloaded profileAddImgSec2" style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/390px-F-15_vertical_deploy.jpg)"  (click)="goToViewProfileCard()"></div> -->
+        <div class="headingName">
+            <span>{{myFullName}}, {{myAge}}</span>
+        </div>
+        
+        
+    </div>
+  <!-- <div class="ng2-lazyloaded profileAddImgSec"  [defaultImage]="defaultImage" [lazyLoad]="profilepic" [offset]="offset" (click)="goToViewProfileCard()"></div> -->
+
+  <!-- <div class="ng2-lazyloaded profileAddImgSec"  [defaultImage]="defaultImage" [lazyLoad]="profilepic" [offset]="offset" (click)="goToViewProfileCard()"></div> -->
+
+    <ion-list class="myProfileSetings">
+        <button ion-item (click)="profilePage()">
+            Edit Profile
+        </button>  
+        <button ion-item (click)="goToSetting()">
+            Settings
+        </button>  
+    </ion-list>
+    
+    <!--
+  <button ion-button full class="singleButton bluBtn" (click)="profilePage()">Edit Profile</button>
+  <button ion-button full class="singleButton bluBtn" (click)="goToSetting()">Settings</button>
+-->
+    
+    
+    
+  <!-- <h6 (click)="clickSpeed()">{{connectionSpeed}}</h6> -->
+
+  <!-- <div class='wrapper'>
+    <div class="demo11" width="100%">
+      <div class='container' *ngFor="let item of demo1" [dragula]='"first-bag"'>
+        <img hight="60px" width="33.33% " [src]=" item.img ">
+      </div>
+      <div class='container' *ngFor="let item of demo2 " [dragula]='"first-bag "'>
+        <img hight="60px " width="33.33% " [src]="item.img ">
+      </div>
+      <div class='container' *ngFor="let item of demo3 " [dragula]='"first-bag "'>
+        <img hight="60px " width="33.33% " [src]="item.img ">
+      </div>
+      </div>
+
+      <div class="demo11" width="100% ">
+      <div class='container' *ngFor="let item of demo4 " [dragula]='"first-bag "'>
+        <img hight="60px " width="33.33% " [src]="item.img ">
+      </div>
+      <div class='container' *ngFor="let item of demo5 " [dragula]='"first-bag "'>
+        <img hight="60px " width="33.33% " [src]="item.img ">
+      </div>
+      <div class='container' *ngFor="let item of demo6 " [dragula]='"first-bag "'>
+        <img hight="60px " width="33.33% " [src]="item.img ">
+      </div>
+    </div>
+  </div> -->
+  
+</ion-content>

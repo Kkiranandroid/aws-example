@@ -1,0 +1,218 @@
+outnow {
+  .calenderSection2 {
+    background: #EFEFF4;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-bottom: 5px;
+      text-transform: capitalize;
+      ion-icon {
+        padding-right: 7px;
+      }
+    }
+    p {
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-transform: capitalize;
+    }
+  }
+  .locationSectionOut {
+    background: #fff;
+    padding: 8px;
+    margin: 10px 0;
+    min-height: 220px;
+    p {
+      margin: 0;
+      padding: 0;
+      padding-bottom: 5px;
+    }
+    .address1out {
+      display: block;
+      color: #aaa;
+      padding-bottom: 10px;
+      p {
+        margin: 0;
+        padding-left: 8px;
+        display: inline-block;
+      }
+    }
+  }
+  .calenderSection3 {
+    display: inline-block;
+    width: 100%;
+    padding: 0 10px;
+    margin-left: 8px;
+    border-bottom: 0px solid #CBCBCB;
+    padding-right: 20px;
+    .outUnilsCls,
+    .timeSections {
+      float: left;
+      width: 50%;
+      line-height: 45px;
+      font-size: 16px;
+    }
+    .timeSections {
+      .item-inner {
+        border-bottom: 0;
+        padding-right: 0;
+        ion-datetime {
+          width: 100%;
+          text-align: right;
+          padding-right: 0;
+          color: $buttonprimary;
+        }
+      }
+    }
+  }
+
+
+  .addBtnClassDiv {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+  }
+  .addBtnClass {
+    font-size: 30px;
+    margin: auto;
+    display: block;
+    background: $buttonprimary;
+    border: 0;
+    box-shadow: none;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    .button-inner {
+      text-shadow: none;
+      font-size: 30px;
+    }
+  }
+  .addBtnClass.activated {
+    background: #715696;
+  }
+
+  .toolbar-title-md {
+    border-bottom: 1px solid #CBCBCB;
+  }
+  .locationIcons {
+    font-size: 28px;
+    line-height: 46px;
+  }
+  .secondSec {
+    position: relative;
+    text-align: left;
+    padding-right: 30px;
+    i {
+      position: absolute;
+      right: 10px;
+      line-height: 46px;
+      top: 0;
+      bottom: 0;
+      font-size: 26px;
+      color: #c7c7c7;
+      line-height: 56px;
+    }
+  }
+  .addBtnClass.activated {
+    background: $buttonprimary;
+  }
+}
+
+
+
+ion-picker-cmp {
+  ion-backdrop {
+    opacity: 0 !important;
+  }
+  .picker-wrapper {
+    transform: none !important;
+    transition-delay: 0 !important;
+    margin-top: 0 !important;
+    width: calc(100% - 30px);
+    padding-bottom: 10px;
+    top: 190px;
+    bottom: 0;
+    height: auto !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+  .picker-above-highlight {
+    border-bottom: 1px solid #c8c7cc;
+    display: inline-block;
+    width: 100%;
+  }
+  .picker-below-highlight {
+    border-top: 1px solid #c8c7cc;
+    display: inline-block;
+    width: 100%;
+  }
+  .picker-toolbar {
+      border: 0 !important;
+    position: absolute;
+    width: 90px;
+    margin: auto;
+    left:0;
+     right:0;
+      height:70px;
+      bottom:22px; 
+    opacity:0;
+    .picker-toolbar-button.picker-toolbar-cancel {
+      display: none;
+    }
+    .picker-toolbar-button {
+      width: 100%;
+      button {
+        display: block;
+        width: 100%;
+        background: transparent;
+        border-radius: 6px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: $buttonprimary;
+      }
+      button.activated {
+        background: transparent;
+        color: $buttonprimary;
+      }
+      span.button-inner {
+        visibility: hidden;
+      }
+      span.button-inner:after {
+        content: 'SET';
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        right: 0;
+        font-weight: 600;
+        font-size: 19px;
+        top: 0;
+        line-height: 44px;
+      }
+    }
+  }
+  .picker-opt-selected {
+    color: #000 !important;
+  }
+}
+.h5Heading {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+/*ion-picker-cmp{
+top: 56px !important;
+  ion-backdrop{
+
+  }
+}*/

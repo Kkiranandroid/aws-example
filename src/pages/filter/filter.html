@@ -1,0 +1,55 @@
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <ion-title class="dateinTitle"> 
+        <span class="headerCancelTxt" (click)="goCancel();">Cancel</span> 
+        <span class="alignMainHead2">Filter</span> 
+        <span class="headerDoneTxt" (click)="goDone();">Done</span> 
+      </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    
+    <ion-list radio-group class="radioBtnMain radioBtnMainHome fixedSection">
+      <ion-item >
+        <ion-label><ion-icon name="ios-infinite"></ion-icon>All Dates</ion-label>
+        <ion-radio (click)="clickOnAnyTime();" checked={{isCheckedAnyTime}} value="val1"></ion-radio>
+      </ion-item>
+
+      <ion-item *ngIf="isOutNowFlag">
+        <ion-label><ion-icon class="fa fa-rocket" ></ion-icon>Out Now</ion-label>
+        <ion-radio  (click)="clickOnOutNow();" checked={{isCheckedOutNow}} value="val2"></ion-radio>
+      </ion-item>
+    </ion-list>
+    
+    <h3 [className]="outNowFlagDiv"> Avaliability </h3>
+    <div class="subScrollContent">
+    <ion-list class="mainAvailables radioBtnMain radioBtnMainHome filterSubRadio {{filterCheckBoxNew}}">
+        <div *ngFor="let avalibilityItem of avalibilityList; let i=index;">
+            <ion-item-sliding>
+                <ion-item>
+                    <ion-label>
+                        <div class="dateSec"><p>{{avalibilityItem.month}}</p><span>{{avalibilityItem.date}}</span></div>
+                        <div class="dateSecSub">
+                            <h1>{{avalibilityItem.city}}</h1>
+                            <span>{{avalibilityItem.locations}}</span>
+                            <p>{{avalibilityItem.fulldate}}</p>
+                        </div>
+                    </ion-label>
+                    <ion-checkbox checked={{avalibilityItem.isChecked}} value="test" (ionChange)="onClickItem(avalibilityItem)"></ion-checkbox>
+                </ion-item>
+                <ion-item-options>
+                    <button (click)="deleteAvalibility(avalibilityItem);" ion-button color="light" icon-start>
+                      <ion-icon name="ios-trash"></ion-icon>
+                    </button>
+                </ion-item-options>
+            </ion-item-sliding>
+        </div>
+    </ion-list>
+    </div>
+    <div class="addBtnClassDiv">
+        <button ion-button class="addBtnClass" (click)="goToCalenderPage()"><ion-icon class="" name="md-add"></ion-icon></button>
+    </div>
+</ion-content>

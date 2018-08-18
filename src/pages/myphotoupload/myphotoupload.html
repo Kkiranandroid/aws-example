@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>DateIN<i class="fa fa-commenting-o flotRit" aria-hidden="true"></i> </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="contentPading">
+    <ion-list>
+        <ion-item *ngFor="let fbPic of fbPics; let i = index;" class="posRel" (click)="goToMyPhotosList(fbPic)">
+            <ion-avatar item-start> <img [src]="fbPic.img"> </ion-avatar>
+            <h2>{{fbPic.name}}</h2>
+            <p>{{fbPic.details}}</p>
+            <i class="fa fa-angle-right rightAngleArrow" aria-hidden="true"></i>
+        </ion-item>
+    </ion-list>
+</ion-content>

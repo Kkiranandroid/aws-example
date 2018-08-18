@@ -1,0 +1,67 @@
+<!--
+  Generated template for the CalenderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar hideBackButton>
+        <ion-title class="dateinTitle"> 
+            <span class="headerCancelTxt" (click)="cancel()">Cancel</span> 
+                <span class="alignMainHead2">{{PageTitle}}</span> 
+            <span class="headerDoneTxt" (click)="goToSchedule()">{{FTUEDoneButtonValue=='Done'?'Done':'Skip'}}</span>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+
+    <div class="calenderSection2" >
+        <ion-row>
+        	<h5 class="calHeading"> When do you want to go on a date? </h5>
+            
+        </ion-row>
+    </div>
+    
+    <ion-calendar [(ngModel)]="dateMulti"
+              [options]="optionsMulti"
+              (onChange)="onChange($event)"
+              [type]="type"
+              [format]="'YYYY-MM-DD'">
+    </ion-calendar>
+
+    <!-- <div class="addBtnClassDiv" *ngIf="isFrom !== 'FTUE'" (click)="goToSchedule()">
+        <button ion-button class="addBtnClass">
+        	<ion-icon class="flotingIcon"  ios="ios-checkmark" md="md-checkmark"></ion-icon>
+        </button>
+    </div> -->
+    <!--first time user exp-->
+    <div class="alignButtonBtm" (click)="goToSchedule()">
+        <button ion-button class="alignButtonBtmSub bluBtn">{{FTUEDoneButtonValue}}</button>
+    </div>
+    <!--first time user exp-->
+</ion-content>
+
+<!--first time user exp-->
+
+<div [className]="firstTimeUserExp">
+    <div class="firstTimeUserExpSub">
+      <div class="firstTimeUserExpTop1 firstTimeUserExpTop4">
+          <div style="background-image: url(assets/imgs/plannowFtue2.png);" class="firstTimeUserExpTop1img4"></div>
+      </div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner1" style="background-image: url(assets/imgs/fiuiHomeSide2.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner2" style="background-image: url(assets/imgs/fiuiHomeSide.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner3" style="background-image: url(assets/imgs/fiuiHomeSide2.png);"></div>
+      <div class="firstTimeUserExpCorner firstTimeUserExpCorner4" style="background-image: url(assets/imgs/fiuiHomeSide.png);"></div>
+    </div>
+    <div class="alignInstagramdesign outNowFabs">
+        <ion-fab center bottom class="fabSection"  (click)="firstTimeUserExpClick()">
+            <button ion-fab color="danger" class="fabSectionSub">
+                <span class="dIconInner dIconInnerMain dIconInnerMainPurpole">
+                    <span class="dIconInnerSub" style="background-image: url(assets/imgs/WoowooTics.png);width: 33px;height: 33px;margin: 18px;"></span>
+                </span>
+            </button>
+        </ion-fab>
+    </div>
+</div>
+<!--first time user exp-->

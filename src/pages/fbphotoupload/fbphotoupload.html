@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar hideBackButton>
+        <ion-title class="dateinTitle"> 
+        <span class="headerCancelTxt" (click)="cancelButton();"><i class="fa fa-angle-left" aria-hidden="true"></i>Back</span> 
+        <div class="logoImageLatestMain"><div class="logoImageLatest"></div></div>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="contentPading">
+
+    <div *ngIf="noItemFound" class="norecordsfound1"><!--  *ngIf="fbPics.lenght >0"  -->
+        <div class="norecordsfoundMain1">
+            <div class="norecordsfoundSub1">No records found</div>
+        </div>
+    </div>
+
+    <ion-list>
+        <ion-item *ngFor="let fbPic of fbPics; let i = index;" class="posRel" (click)="gotoFbtimeline(fbPic)">
+            <ion-avatar item-start> <img [src]="fbPic.img"> </ion-avatar>
+            <h2>{{fbPic.name}}</h2>
+            <p>{{fbPic.details}}</p>
+            <i class="fa fa-angle-right rightAngleArrow" aria-hidden="true"></i>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

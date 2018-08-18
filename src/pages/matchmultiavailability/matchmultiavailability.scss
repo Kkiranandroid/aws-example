@@ -1,0 +1,68 @@
+page-matchmultiavailability {
+    
+    .headerMainSection{
+        font-family: "Roboto", "Helvetica Neue", sans-serif;
+        position: absolute;
+        left: 30px;
+        right: 80px;
+        top: 0;
+        bottom: 0;
+        .matchScrollImg2 {
+            height: 40px;
+            width: 40px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 100px;
+            float: left;
+            margin: 8px 6px;
+            margin-right: 12px;
+        }
+        span{
+            display: block;
+            text-align: left;
+            font-size: 19px;
+            line-height: 56px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    
+    .headerDoneTxt {
+        font-weight: 400 !important;
+        line-height: normal !important;
+        ion-icon{
+            line-height: 56px;
+            font-size: 21px;
+            &:first-child{
+                font-size: 25px;
+                margin-right: 30px;
+            }
+        }
+    }
+    .headerCancelTxt{
+        i{
+            font-size: 41px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -6px;
+            margin-left: -6px;
+            padding-right: 6px;
+        }
+    }
+    .mainAvailables ion-item:after {
+        left: 96px;
+    }
+    
+    .msgheading{
+        font-size: 22px;
+        padding: 0 16px;
+        span{
+            float: right;
+            margin: 0;
+            margin-top: 1px;
+            font-weight: 100;
+            color: #B3B3B3;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar hideBackButton>
+        <ion-title class="dateinTitle"> 
+        <span class="headerCancelTxt" (click)="cancelButton();"><i class="fa fa-angle-left" aria-hidden="true"></i>Back</span> 
+        <div class="logoImageLatestMain"><div class="logoImageLatest"></div></div>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="contentPading">
+<ion-grid>
+  <ion-row>
+    <ion-col col-4 *ngFor="let fbtimeline of fbTimelineArray; let i=index;">
+        <img class="profileAddImgSec"  id="facebook_profilepic{{fbtimeline.photoId}}" [src]=" fbtimeline.imageUrl " (click)="ckickedImage(fbtimeline);">
+        <canvas #canvasforbase style="display:none;"></canvas>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

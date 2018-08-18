@@ -1,0 +1,65 @@
+datelist {
+
+ .content-ios {
+    .scroll-content {
+      -webkit-overflow-scrolling: auto !important;
+    }
+  }
+    .toolbar-title-md{
+        border-bottom: 1px solid #CBCBCB; 
+    }
+    .addBtnClass.activated{
+    	background: $buttonprimary;
+    }
+    .headerCancelTxt{
+        i{
+            font-size: 41px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -6px;
+            margin-left: -6px;
+            padding-right: 6px;
+        }
+    }
+}
+
+.radioBtnMain {
+        ion-item {
+            padding-left: 8px;
+            ion-label{
+                padding-left: 8px;
+                font-weight: 500;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                ion-icon{
+                    margin-right: 16px;
+                    border-radius: 6px;
+                    padding: 5px;
+                }
+            }
+        }
+        ion-item.item-radio-checked{
+            ion-label{
+                color: $buttonprimary !important;
+                ion-icon{
+                    color: #fff;
+                    background: $buttonprimary;
+                }
+            }
+        }
+    }
+
+.norecordsfound2 {
+    display: table;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+.norecordsfoundMain2 {
+    display: table-cell;
+    vertical-align: middle;
+}
+.norecordsfoundSub2 {
+    visibility: visible !important;
+    text-align: center;
+    color: #999;
+}

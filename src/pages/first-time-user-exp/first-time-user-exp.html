@@ -1,0 +1,53 @@
+<ion-content>
+  <div class="slideBgMainLogin" style="background-image:url(assets/imgs/ftuiMainImage.png)"></div>
+  <ion-slides class="loginCarocel" pager (ionSlideDidChange)="slideChanged()">
+    <ion-slide>
+      <div style="background-image:url(assets/imgs/Ftue/ftui1.png);" class="loginCarocelImgs"></div>
+        <div class="loginCarocelImgsTxt"><!--style="background-image:url(assets/imgs/Ftue/ftui11.png)"-->
+            <h2>Break the restraints <br/>of time and location</h2>
+            <p>WooWoo is the dating app that allows you<br/>to plan ahead or live in the moment. You <br/>can now date in 3 revolutionary ways <br/>giving you complete freedom...</p>
+        </div>
+    </ion-slide>
+    <ion-slide>
+      <div style="background-image:url(assets/imgs/Ftue/ftui2.png);" class="loginCarocelImgs"></div>
+        <div class="loginCarocelImgsTxt">
+            <h2 class="boldData">ChatNow!</h2>
+            <p>See singles near you! Use ChatNow to <br/>swipe, match, chat and Woo until your<br/>hearts contents...</p>
+        </div>
+    </ion-slide>
+    <ion-slide>
+      <div style="background-image:url(assets/imgs/Ftue/ftui3.png);" class="loginCarocelImgs"></div>
+        <div class="loginCarocelImgsTxt">
+            <h2 class="boldData">OutNow!</h2>
+            <p>Hitting the town? Want to know who's<br/>single? Use OutNow to find out! Match <br/>with singles out at the same time and<br/>place as you...</p>
+        </div>
+    </ion-slide>
+    <ion-slide>
+      <div style="background-image:url(assets/imgs/Ftue/ftui4.png);" class="loginCarocelImgs"></div>
+        <div class="loginCarocelImgsTxt">
+            <h2 class="boldData">PlanNow!</h2>
+            <p>Free yourself from your own location!<br/>Business trip? Holiday? Simply set the<br/>date and location of your adventure and<br/>start swiping...</p>
+        </div>
+    </ion-slide>
+    <ion-slide>
+      <div style="background-image:url(assets/imgs/Ftue/ftui5.png);" class="loginCarocelImgs"></div>
+        <div class="loginCarocelImgsTxt">
+            <h2 class="boldData">Let's get you<br />started!</h2>
+        </div>
+      <button class="button-background bluBtn loginBtnChanges" ion-button (click)="gotoSettingsmainPage()">Setup my profile</button>
+    </ion-slide>
+  </ion-slides>
+
+  <!-- <div class="slidePrevSections" *ngIf="navigationSections" (click)="slidePrev()">
+      <i class="fa fa-angle-left" aria-hidden="true"></i>
+      <span>Back</span>
+  </div>
+
+  <div class="slideNextSections" (click)="slideNext()">
+      <span>Next</span>
+      <i class="fa fa-angle-right" aria-hidden="true"></i>
+  </div> -->
+
+  <!-- <ion-icon name="ios-close-circle" class="closeIcons" (click)="goToProfilePage()"></ion-icon> -->
+  
+</ion-content>

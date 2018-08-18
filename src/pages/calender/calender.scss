@@ -1,0 +1,410 @@
+page-calender {
+ .content-ios {
+    .scroll-content {
+      -webkit-overflow-scrolling: auto !important;
+    }
+  }
+  .calenderSection2 {
+    background: #EFEFF4;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
+    margin-bottom: 0;
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-bottom: 5px;
+      text-transform: capitalize;
+      text-align: left;
+      ion-icon {
+        padding-right: 7px;
+      }
+    }
+    p {
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-transform: capitalize;
+      text-align: left;
+    }
+  }
+  .locationIcons {
+    font-size: 28px;
+    line-height: 46px;
+  }
+  .secondSec {
+    position: relative;
+    padding-right: 30px;
+    i {
+      position: absolute;
+      right: 10px;
+      line-height: 46px;
+      top: 0;
+      bottom: 0;
+      font-size: 26px;
+      color: #c7c7c7;
+      line-height: 56px;
+    }
+  }
+  .toolbar-title-md {
+    border-bottom: 1px solid #CBCBCB;
+  }
+  ion-calendar {
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    ion-calendar-week {
+      position: absolute;
+      display: inline-block;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      .week-toolbar {
+        min-height: 24px !important;
+      }
+      .week-title.transparent {
+        padding: 0;
+        height: 15px;
+        color: #000000;
+        font-size: 11px;
+        border-bottom: 1px solid #c8c7cc;
+      }
+    }
+    .title {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 30px;
+      border-bottom: 1px solid #c8c7cc;
+      button.back,
+      button.forward {
+        display: none;
+      }
+      button.switch-btn {
+        span {
+          display: block;
+          color: $buttonprimary;
+          font-size: 17px;
+          text-transform: capitalize;
+        }
+      }
+    }
+    ion-calendar-month {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 65px;
+      .days-box {
+        .days {
+          height: 50px;
+          border-bottom: 1px solid #c8c7cc;
+          .days-btn.today {
+            background-color: $buttonprimary;
+            color: #ffffff;
+            p {
+              color: #ffffff;
+              font-weight: 400;
+            }
+          }
+
+          .selectedDateClass p:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            height: 8px;
+            background: #53D769;
+            width: 8px;
+            left: 0;
+            right: 0;
+            display: block;
+            margin: auto;
+            border-radius: 50%;
+          }
+          .selectedDateClass p {
+            position: relative;
+          }
+          .unselectedDateClass p:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            height: 8px;
+            background: #A7A7A7;
+            width: 8px;
+            left: 0;
+            right: 0;
+            display: block;
+            margin: auto;
+            border-radius: 50%;
+          }
+          .unselectedDateClass p {
+            position: relative;
+          }
+        }
+        .days:nth-of-type(7n+1),
+        .days:nth-of-type(7n+7) {
+          button {
+            p {
+              color: #8E8E93;
+            }
+          }
+        }
+        .days {
+          .days-btn.on-selected {
+            p {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+  ion-calendar-week .week-title li:nth-of-type(7n),
+  ion-calendar-week .week-title li:nth-of-type(7n+1) {
+    color: #8E8E93;
+  }
+  ion-calendar-month-picker .month-picker {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+  }
+}
+
+.modalBackButton {
+  color: #DB49D8;
+  font-size: 34px !important;
+  font-weight: 600;
+}
+
+.modalBackButtonMain {
+  position: absolute;
+  left: 18px;
+  ;
+}
+
+.modalLists {
+  margin: 16px 0;
+  ion-item {
+    padding: 0;
+    .item-inner {
+      padding-left: 25px;
+    }
+  }
+  ion-item.input-has-focus {
+    .item-inner {
+      border-color: #dedede !important;
+      box-shadow: none !important;
+    }
+  }
+  .modalLocationIcon {
+    padding-right: 10px;
+    vertical-align: middle;
+  }
+  .modalLocationIcon1 {
+    padding-left: 10px;
+    vertical-align: middle;
+  }
+}
+
+.innerModalLists {
+  ion-item {
+    padding: 0;
+    .item-inner {}
+  }
+}
+
+.modalHeader {
+  .toolbar-background {
+    border-color: #fff;
+    background: #fff;
+  }
+}
+
+.modalHeader:after {
+  background: 0;
+}
+
+.dateListMain {
+  padding: 5px;
+  background: #fff;
+  display: inline-block;
+  width: 100%;
+  margin: 0px;
+  float: left;
+  border-radius: 4px 4px 4px 4px;
+}
+
+.contentInfo2 {
+  float: left;
+  width: calc(100% - 70px);
+  padding-left: 15px;
+  h2 {
+    margin: 0;
+    padding-left: 6px;
+  }
+  p {
+    margin: 0;
+    color: #aaa;
+    padding-top: 2px;
+    font-size: 15px;
+  }
+}
+
+.contentPading {
+  background: #ffffff;
+  ion-label {
+    margin: 0;
+  }
+}
+
+.scrollContnt {
+  padding-top: 145px;
+  overflow-y: scroll;
+  height: calc(100vh - 56px);
+}
+
+.scrollContntMain {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  z-index: 111;
+  margin: 0;
+}
+
+.modalScroll {
+  .scroll-content {
+    overflow-y: hidden;
+  }
+}
+
+.modalinputClose {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  .modalinputCloseIcon {
+    font-size: 30px;
+    right: 20px;
+    bottom: 6px;
+    position: absolute;
+    font-weight: 600;
+  }
+}
+
+.searchSecion {
+  .toolbar-md {
+    border-bottom: 1px solid #CBCBCB;
+  }
+  ion-searchbar {
+    width: calc(100% - 75px);
+  }
+  .modalBackButtonMain {
+    left: auto;
+    right: 10px;
+    button {
+      color: $buttonprimary;
+      font-weight: 400;
+      text-transform: capitalize;
+      font-size: 18px;
+    }
+  }
+
+  ion-searchbar.searchbar-md {
+    padding-left: 16px !important;
+    .searchbar-search-icon {
+      top: 7px;
+      left: 7px;
+    }
+    input {
+      border-radius: 10px;
+      box-shadow: none;
+      background: #F0F0F0;
+      padding: 2px 32px;
+    }
+  }
+}
+
+.modalLists {
+  ion-item {
+    .item-inner {
+      padding-left: 16px;
+      border: 0 !important;
+    }
+    .bliClr {
+      color: $buttonprimary;
+    }
+  }
+}
+
+.modalRecent {
+  background: #F9F9F9;
+  min-height: 35px;
+  ion-label {
+    margin: 0;
+    font-weight: 500;
+  }
+}
+
+.scrollContnt {
+  padding-top: 85px;
+  .contentPading {
+    padding: 0;
+    .item-inner {
+      padding: 0;
+      .dateListMain {
+        border-bottom: 1px solid #CBCBCB;
+        border-radius: 0;
+        margin-left: 4px;
+        padding: 10px 0;
+        padding-left: 16px;
+        .contentInfo2 {
+          padding-left: 0;
+          width: 100%;
+          display: block;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          h3,
+          h5 {
+            vertical-align: middle;
+            display: inline-block;
+            font-size: 16px;
+            b {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.calHeading {
+      display: block;
+      text-align: center;
+      width: 100%;
+}
+
+
+
+.alignButtonBtm{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    .alignButtonBtmSub{
+        height: 44px;
+        width: calc(100% - 20px);
+        margin: 0;
+        margin: auto;
+        display: block;
+    }
+}

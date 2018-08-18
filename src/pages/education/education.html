@@ -1,0 +1,62 @@
+<ion-header>
+    <!-- <ion-navbar>
+        <ion-title> DateIN </ion-title>
+    </ion-navbar> -->
+    <ion-navbar hideBackButton>
+        <ion-title class="dateinTitle"> 
+        <span class="headerCancelTxt" (click)="cancelButton();"><i class="fa fa-angle-left" aria-hidden="true"></i>Back</span> 
+        <span class="alignMainHead2">Education</span>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="contentPading">
+    <ion-list>
+
+        <!-- <span class="posRel">
+        <ion-item class="border0">
+               <ion-label class="setingLabelTxt setingLabelTxtmargin0">Other Occupations</ion-label>
+        </ion-item>
+             <i *ngIf="otherOccupetionList" class="fa fa-spinner ion-loading-c iconPostionCng" aria-hidden="false"></i>
+        </span> -->
+
+
+        <span class="posRel">
+        <ion-item class="border0">
+            <ion-label class="setingLabelTxt setingLabelTxtmargin0">Facebook Profile</ion-label>
+        </ion-item>
+        <i *ngIf="fbEducationList" class="fa fa-spinner ion-loading-c iconPostionCng" aria-hidden="false"></i>
+        </span>
+
+        <ion-list class="radioBtnMain" radio-group [(ngModel)]="eductions">
+            <ion-item *ngFor="let eduarray of educationArray;">
+                <ion-label>{{eduarray.schoolName}}</ion-label>
+                <ion-radio value={{eduarray.educationId}} (ionSelect)="radioeducationselect(eduarray)"  checked={{eduarray.ischecked}}></ion-radio>
+            </ion-item>
+        </ion-list>
+        <ion-item class="border0">
+            <ion-label class="setingLabelTxt setingLabelTxtmargin0">Not listed</ion-label>
+        </ion-item>
+         <span class="modalinputClose">
+            <ion-item class="educationTxtField">
+                <ion-input (ionChange)='getItems($event)' [(ngModel)]="education" type="text" placeholder="enter school/university attended"></ion-input>
+            </ion-item> 
+
+            <ion-icon *ngIf="showClearIcon =='true'" (click)="clearEditText();" name="close" class="modalinputCloseIcon"></ion-icon><!--   -->
+        </span>
+
+        <ion-item class="educationTxtField">
+            <ion-list *ngIf="showList =='true'">
+                <ion-item *ngFor="let item of educationList;" (click)="addToEducationTB(item.position);">
+                      {{item.position}}
+                </ion-item>
+            </ion-list>
+        </ion-item> 
+
+               
+
+    
+ 
+     <!--    <button ion-button full class="pinkBtn">Submit</button> -->
+        
+    </ion-list>
+</ion-content>

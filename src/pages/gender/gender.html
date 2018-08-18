@@ -1,0 +1,28 @@
+<ion-header>
+    <!-- <ion-navbar>
+        <ion-title> DateIN <i class="fa fa-commenting-o flotRit" aria-hidden="true"></i> </ion-title>
+    </ion-navbar> -->
+    <ion-navbar hideBackButton>
+        <ion-title class="dateinTitle"> 
+        <span class="headerCancelTxt" (click)="cancelButton();"><i class="fa fa-angle-left" aria-hidden="true"></i>Back</span> 
+        <span class="alignMainHead2">Gender</span>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="contentPading">
+    <ion-list>
+        <ion-item class="border0">
+            <ion-label class="setingLabelTxt setingLabelTxtmargin0">I am a</ion-label>
+        </ion-item>
+        <ion-list class="radioBtnMain" radio-group [(ngModel)]="gender">
+            <ion-item>
+                <ion-label>Man</ion-label>
+                <ion-radio (click)="showAlert('male')" value="Man"  checked={{man}}></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Woman</ion-label>
+                <ion-radio (click)="showAlert('female')" value="Woman" checked={{woman}}></ion-radio>
+            </ion-item>
+        </ion-list>
+    </ion-list>
+</ion-content>

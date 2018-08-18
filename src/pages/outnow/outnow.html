@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title class="dateinTitle">
+      <span class="headerCancelTxt" (click)="goBack()">Cancel</span>
+      <span class="alignMainHead2">Out Now</span>
+      <!-- <span class="headerDoneTxt" (click)="AddSchedule()">Go</span> -->
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <h5 class="h5Heading"> What time will you be out to? </h5>
+
+  <!--
+  ============= Start date and end date =============
+  <ion-grid>
+    <ion-row>
+      <ion-col width-25>
+        <ion-label>Dates:</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-datetime displayFormat="MM/DD/YY to" pickerFormat="YYYY MMM DD" [(ngModel)]="startDate"> </ion-datetime>
+      </ion-col>
+      <ion-col width-33>
+        <ion-datetime displayFormat="MM/DD/YY" pickerFormat="YYYY MMM DD" [(ngModel)]="endDate"> </ion-datetime>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  -->
+
+  <div class="calenderSection3" ><!-- minuteValues="0,15,30,45" -->
+      <ion-datetime style="display: none;" id="openTimePicker" displayFormat="HH:mm" minuteValues="0,15,30,45" [(ngModel)]="myDate" (ionChange)="changeCheckOutStartTime()" (ionCancel)="ionCancelEvent()"></ion-datetime>
+  </div>
+
+  <div class="addBtnClassDiv">
+    <button ion-button class="addBtnClass" (click)="AddSchedule()">
+      <ion-icon class="fa fa-rocket"></ion-icon>
+    </button>
+  </div>
+</ion-content>

@@ -1,0 +1,1254 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+
+
+
+
+
+$buttonprimary: #350B72;
+$buttonsecondary: #4b10a2;
+
+/* first time page start */
+@font-face {
+    font-family: 'mostra_nuovaregular';
+    src: url('../assets/fonts/mostra_nuova/mostra_nuova_regular-webfont.eot');
+    src: url('../assets/fonts/mostra_nuova/mostra_nuova_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/mostra_nuova/mostra_nuova_regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/mostra_nuova/mostra_nuova_regular-webfont.woff') format('woff'),
+         url('../assets/fonts/mostra_nuova/mostra_nuova_regular-webfont.svg#mostra_nuovabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'mostra_nuovalight';
+    src: url('../assets/fonts/mostra_nuova/mostra_nuova_light-webfont.eot');
+    src: url('../assets/fonts/mostra_nuova/mostra_nuova_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/mostra_nuova/mostra_nuova_light-webfont.woff2') format('woff2'),
+         url('../assets/fonts/mostra_nuova/mostra_nuova_light-webfont.woff') format('woff'),
+         url('../assets/fonts/mostra_nuova/mostra_nuova_light-webfont.svg#mostra_nuovathin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'mostra_nuovabold';
+    src: url('../assets/fonts/mostra_nuova/mostra_nuova_bold-webfont.eot');
+    src: url('../assets/fonts/mostra_nuova/mostra_nuova_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/mostra_nuova/mostra_nuova_bold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/mostra_nuova/mostra_nuova_bold-webfont.woff') format('woff'),
+         url('../assets/fonts/mostra_nuova/mostra_nuova_bold-webfont.svg#mostra_nuovabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+/* font title */
+@font-face {
+    font-family: 'baloo_bhainaregular';
+    src: url('../assets/fonts/baloobhaina-regular-webfont.eot');
+    src: url('../assets/fonts/baloobhaina-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/baloobhaina-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/baloobhaina-regular-webfont.woff') format('woff'),
+         url('../assets/fonts/baloobhaina-regular-webfont.svg#baloo_bhainaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* font title */
+
+
+
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 450px; }
+  #sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 100px; height: 90px; font-size: 4em; text-align: center; }
+
+
+
+
+/*radio style*/
+
+.radioBtnMain {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0;
+  .radio-md .radio-icon {
+    border-color: transparent;
+  }
+  .item-radio-checked {
+    background: #ccc;
+  }
+  .radio-md .radio-checked:after {
+    content: "\f3ff";
+    font-family: "Ionicons";
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: inherit;
+    color: #1B9AF7;
+    font-size: 31px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: -10px;
+    left: 0;
+  }
+  .radio-md .radio-checked {
+    border-color: transparent;
+  }
+  .radio-md .radio-inner {
+    display: none;
+  }
+  .item-radio-checked.item-md ion-label {
+    color: #000;
+  }
+}
+
+
+/*radio style*/
+
+.contentInfo {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 4px 10px;
+  border: 0px solid #9580b7;
+  color: #ffffff;
+  background: #000000;
+  .contentInfoSub1 {
+      font-size: 16px;
+      float: left;
+      font-weight: 500;
+  }
+  .contentInfoSub2 {
+    vertical-align: middle;
+  }
+}
+
+.ageDate {
+  padding-left: 3px;
+}
+
+.toolbar-title {
+  color: $buttonprimary;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.toolbar-background {
+  border-color: #ffffff;
+  background: #ffffff;
+}
+
+ion-title {
+  text-align: center;
+}
+
+.flotWhite {
+  color: #C5CCFE;
+  font-size: 33px;
+}
+
+
+
+.flotRit {
+  float: right;
+  font-size: 33px;
+}
+
+.flotRitIos {
+  float: right;
+  font-size: 33px;
+  margin-right: 2px
+}
+
+
+.toolbar-title i {
+        line-height: 56px;
+        &:last-child{
+            color: $buttonprimary;
+            position: relative;
+            span{
+                position: absolute;
+                top: 12px;
+                right: -2px;
+                width: 8px;
+                height: 8px;
+                background-color: #53D769;
+                border-radius: 50%;
+            }
+        }
+    }
+
+
+.flotLft {
+  float: left;
+  font-size: 33px;
+}
+
+.dIcon {
+  position: fixed;
+  z-index: 111;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.dIconInner {
+  font-size: 34px;
+  padding: 15px 25px;
+  background: #AB78B3;
+  color: #fff;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+ion-content {
+  background-color: #ffffff;
+}
+
+.calenderIcons {
+  position: fixed;
+  left: 8px;
+  top: 66px;
+  color: #bd6b6e;
+  font-size: 25px !important;
+  z-index: 111;
+}
+
+
+
+
+
+.button-background.activated {
+  background: #AB78B3 !important;
+}
+
+.popoverContnt {
+  margin-top: 30px;
+  .popover-content {
+    width: 200px;
+    border: 0;
+    box-shadow: none;
+  }
+  ion-list {
+    margin: 0;
+    ion-item {
+      min-height: 60px;
+    }
+  }
+}
+
+.popoverContent {
+  span {
+    display: block;
+    color: #999;
+    font-size: 13px;
+  }
+}
+
+.radioBtnMainHome .item-radio-checked {
+  background: #DCD4F9;
+}
+
+.back-button {
+  color: #DB49D8;
+  .back-button-icon {
+    font-size: 35px;
+    font-weight: 900;
+  }
+}
+
+.pinkBtn,
+settingsub .pinkBtn.activated {
+  padding: 25px 0;
+}
+
+.pinkBtnritBtn {
+  margin-right: 10px !important;
+}
+
+.pinkBtnlftBtn {
+  margin-left: 10px !important;
+}
+
+
+
+
+.setingLabelTxt,
+.textAreaAlignment .item-inner ion-label {
+  font-size: 17px !important;
+}
+
+.msgContent {
+  font-size: 13px !important;
+}
+
+.msgName {
+  font-size: 18px !important;
+}
+
+.msgMain .matchScroll {
+  font-size: 17px !important;
+}
+
+.pinkBtn,
+settingsub .pinkBtn.activated {
+  padding: 25px 0;
+  font-size: 17px;
+}
+
+ion-label {
+  font-size: 18px !important;
+}
+
+.popoverContent span {
+  font-size: 14px;
+}
+
+.action-sheet-container {
+  .action-sheet-button {
+    .button-inner {
+      text-align: center;
+      display: block;
+      color: #350B72;
+      font-size: 19px;
+    }
+  }
+}
+
+.action-sheet-container {
+  width: 85%;
+  margin: auto;
+}
+
+.textAreaProfile {
+  ion-item.item-input-has-focus {
+    .item-inner {
+      border-bottom: 1px solid #dedede !important;
+      box-shadow: none !important;
+    }
+    ion-label {
+      color: #999 !important;
+    }
+  }
+}
+
+.bottomDrawer .action-sheet-button {
+  border-bottom: 1px solid #ccc;
+}
+
+.bottomDrawer .action-sheet-button:last-child {
+  border: 0;
+}
+
+.toolbar-content-md {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.back-button.show-back-button {
+  z-index: 1111;
+}
+
+.fa.fa-commenting-o {
+  z-index: 1111;
+}
+
+.textAreaProfile {
+  ion-item.item-input-has-focus {
+    .item-inner {
+      border-bottom: 1px solid #dedede !important;
+      box-shadow: none !important;
+    }
+
+    ion-label {
+      color: #999 !important;
+    }
+  }
+}
+
+
+.mainBg {
+  background: #e2e2e2;
+}
+
+ion-popover.popover-ios.popoverContnt {
+  margin-top: 0;
+}
+
+.title.title-ios {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.matchesSwipe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 111;
+  color: #fff;
+  text-align: center;
+  padding-top: 40vh;
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 37px;
+    font-weight: 400;
+  }
+  span {
+    display: block;
+    font-size: 18px;
+    padding-bottom: 20px;
+    i,
+    ion-icon {
+      padding-right: 8px;
+      vertical-align: middle;
+      font-size: 24px;
+    }
+    ion-icon {
+      font-weight: 600;
+    }
+  }
+  .matchesSwipeDiv {
+    padding-top: 40px;
+    text-align: left;
+    width: 220px;
+    margin: auto;
+  }
+}
+
+.filterMainSpan {
+  position: relative;
+  ion-icon {
+    z-index: 111;
+    color: #F28500;
+    font-size: 24px;
+    position: fixed;
+    left: 20px;
+    top: 56px;
+  }
+}
+
+.firstDatePop {
+    text-align: center;
+    width: 200px;
+    display: block;
+    margin: auto;
+    padding: 30px 0px;
+    background: #FEFEFE;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-size: 15px;
+    position: relative;
+}
+
+.firstDatePop:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #FEFEFE;
+    position: absolute;
+    bottom: -10px;
+    left: 90px;
+    text-align: center;
+}
+
+ 
+.dateinTitle{
+    font-family: baloo_bhainaregular;
+    font-weight: 500;
+    font-size: 27px;
+    .toolbar-title {
+        color: #000;
+        font-size: 27px;
+        font-weight: 500;
+    }
+}
+ion-header:after{
+    display: none;
+}
+.nxtButton {
+    position: absolute;
+    right: 16px;
+    top: 0;
+    bottom: 0;
+    background: transparent;
+    color: $buttonprimary;
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: capitalize;
+    i {
+        padding-left: 5px;
+        font-weight: 600;
+    }
+}
+.backButton {
+    position: absolute;
+    left: 16px;
+    top: -5px;
+    bottom: 0;
+    background: transparent;
+    color: #DB49D8;
+    font-weight: 500;
+    font-size: 35px;
+    text-transform: capitalize;
+    i {
+        padding-right: 5px;
+        font-weight: 600;
+    }
+}
+.profilescreenMain{
+    margin-top: 15px;
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+    h3 {
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
+
+.finishButton {
+        margin-left: 0;
+        margin-right: 0;
+        position: fixed;
+        width: 50%;
+        left: 25%;
+        right: 25%;
+        bottom: 5px;
+        border-radius: 4px;
+        background: #AB78B3;
+    }
+    .finishButton.activated {
+        background: #AB78B3;
+    }
+
+
+
+/*new change*/
+
+button.bluBtn{
+    background: $buttonprimary !important;
+}
+button.bluBtn.activated{
+    background: $buttonsecondary !important;
+}
+.bluSelect{
+    color: $buttonprimary;
+}
+.alignMainHead{
+    line-height: 26px;
+    display: inline-block;
+    padding-top: 17px;
+}
+.alignMainHead2{
+     line-height: 26px;
+    display: inline-block;
+    padding-top: 15px;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 100;
+}
+.headerCancelTxt, .headerDoneTxt{
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    color: $buttonprimary;
+}
+.toolbar-title-md, .toolbar-title-ios{
+    .headerCancelTxt{
+        float: left;
+        line-height: 56px;
+        font-weight: 500;
+        position: absolute;
+        left: 16px;
+        z-index: 111;
+    }
+    .headerDoneTxt{
+        float: right;
+        line-height: 56px;
+        font-weight: 500;
+        position: absolute;
+        right: 16px;
+        z-index: 111;
+    }
+}
+.addArrow{
+    position: relative;
+    display: table;
+    width: 100%;
+    ion-item{
+        ion-note{
+            margin-right: 20px !important;
+        }
+    }
+    i{
+        position: absolute;
+        font-size: 23px;
+        right: 9px;
+        top: 0;
+        z-index: 111;
+        bottom: 0;
+        line-height: 49px;
+        color: #C7C7CC;
+    }
+}
+.ios{
+    .addArrow{
+        i{
+            line-height: 45px;
+        }
+    }
+}
+.multiButton{
+    display: table;
+    width: 100%;    
+    padding: 10px 15px 0px 15px;
+    button{
+        width: 48%;
+        float: left;
+        margin: 0;
+    }
+    button:first-child{
+        margin-right: 2%;
+    }
+    button:last-child{
+        margin-left: 2%;
+    }
+}
+.singleButton{
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.alert-md [aria-checked=true] .alert-radio-icon, .alert-ios [aria-checked=true] .alert-radio-icon {
+    border-color: $buttonprimary;
+}
+.alert-md .alert-radio-inner{
+    background-color: $buttonprimary;
+}
+.alert-ios [aria-checked=true] .alert-radio-inner{
+    left: 7px;
+    top: -7px;
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    border-width: 2px;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-style: solid;
+    border-color: $buttonprimary;
+}
+.alert-md [aria-checked=true] .alert-radio-label, .alert-ios [aria-checked=true] .alert-radio-label{
+    color: $buttonprimary;
+}
+.alert-md .alert-button, .alert-ios .alert-button{
+    color: $buttonprimary;
+}
+
+
+
+.toggle-md.toggle-checked .toggle-inner{
+    background-color: $buttonprimary;
+}
+.toggle-md.toggle-checked .toggle-icon{
+    background-color: #d3ecf8;
+}
+.toggle-ios.toggle-checked .toggle-icon{
+    background-color: $buttonprimary;
+}
+
+ .clrBlack{
+    color: #000;
+}
+
+/*latest(20-01-2018)*/
+.dIconMidleAlign{
+      font-family: baloo_bhainaregular;
+      margin: auto;
+      text-align: center;
+}
+
+
+
+.toolbar-title-md{
+    position: relative;
+    min-height: 56px;
+}
+.toolbar-title-ios{
+    position: relative;
+    min-height: 56px;
+}
+
+
+
+
+
+
+
+
+
+
+/*20/01*/
+.mainAvailables{
+    .dateSec{
+        width: 65px;
+        height: 65px;
+        border: 1px solid #CBCBCB;
+        text-align: center;
+        border-radius: 15px;
+        text-transform: uppercase;
+        float: left;
+        padding: 5px 0px;
+        span{
+            display: block;
+            font-size: 35px;
+            color: #000;
+            font-weight: 400;
+        }
+        p{
+            color: $buttonprimary;
+            margin: 0;
+            font-weight: 500;
+            margin-bottom: -5px;
+        }
+    }
+    .dateSecSub{
+        float: right;
+        width: calc(100% - 80px);
+        h1, span, p{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            display: block;
+        }
+        h1{
+            font-size: 19px;
+            font-weight: 600;
+            margin: 0;
+        }
+        span, p{
+            font-size: 14px;
+            padding-top: 3px;
+        }
+    }
+    ion-item{
+        border: 0 !important;
+        .item-inner{
+            border-bottom: 0px solid #CBCBCB !important;
+            position: relative;
+        }
+    }
+    ion-item:after{
+        content: '';
+        position: absolute;
+        height: 1px;
+        bottom: 0;
+        left: 100px;
+        right: 0;
+        background: #CBCBCB;
+    }
+    ion-item.item-ios:after{
+        left: 140px;
+    }
+    ion-item.item-checkbox-checked{
+        background: #F7F7FD;
+    }
+}
+.mainAvailables .addLine ion-item:after{
+    left: 144px;
+}
+.mainAvailables .removeLine ion-item:after{
+    left: 100px;
+}
+
+/*checkBox */
+.checkbox-md .checkbox-icon, .checkbox-ios .checkbox-icon{
+    border-width: 1px;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    border-color: #CDCCD0;
+}
+.checkbox-md .checkbox-checked .checkbox-inner, .checkbox-ios .checkbox-checked .checkbox-inner{
+    width: 6px;
+    height: 12px;
+    left: 7px;
+    top: 3px;
+}
+.checkbox-md .checkbox-checked, .checkbox-ios .checkbox-checked {
+    border-color: $buttonprimary;
+    background-color: $buttonprimary;
+}
+.mainAvailables{
+    .item.item-md .checkbox-md{
+        margin-right: 20px;
+    }
+}
+/*checkBox */
+/*ios toolBat*/
+.toolbar-ios{
+    ion-title{
+        .headerCancelTxt{
+            left: 6px;
+        }
+        .headerDoneTxt{
+            right: 6px;
+        }
+    }
+}
+/*ios toolBat*/
+
+/*footer sec*/
+ion-footer{
+    ion-toolbar{
+        min-height: 40px !important;
+        .toolbar-background{
+            background: #F9F9F9;
+        }
+    }
+}
+.fontweight400{
+    font-weight: 400 !important; 
+}
+/*footer sec*/
+
+/*20/01*/
+
+
+
+/*22-01*/
+.radioBtnMain .radio-md .radio-checked:after{
+    color: $buttonprimary;
+}
+.radioBtnMainHome .item-radio-checked{
+    background: #fff;
+}
+.radioBtnMain{
+    border: 0;
+}
+.addBtnClassDiv{
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+    }
+    .addBtnClass{
+        font-size: 30px;
+        margin: auto;
+        display: block;
+        background: $buttonprimary;
+        border: 0;
+        box-shadow: none;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        .button-inner{
+            text-shadow: none;
+            font-size: 30px;
+        }
+    }
+    .addBtnClass.activated{
+        background: $buttonsecondary;
+    }
+.mainAvailables .dateSecSub p{
+    color: #8e8e8e;
+}
+    .filterSubRadio{
+        ion-item:after{
+            left: 98px !important;
+        }
+        ion-item{
+            ion-label{
+                margin-top: 13px;
+                margin-bottom: 13px;
+            }
+            &.item-radio-checked{
+                ion-label{
+                    .dateSec{
+                        background: $buttonprimary;
+                        p, span{
+                            color: #fff;
+                        }
+                    }
+                    .dateSecSub{
+                        p{
+                            color: #abace8;
+                        }
+                    }
+                }
+            }
+        }
+        ion-item-options{
+            button{
+                padding: 0 35px !important;
+                background: #FF3B30;
+                color: #fff;
+                font-size: 25px;
+                ion-icon{
+                    padding-bottom: 0 !important;
+                }
+            }
+        }
+    }
+/*22-01*/
+
+.fixedSection{
+  position: fixed;
+  top:56px;
+  left:0;
+  right:0;
+  z-index:111;
+}
+.subScrollContent{
+  margin-bottom:100px;
+}
+.marginTp{
+  margin-top:100px !important;
+}
+
+
+
+.norecordsfound {
+    display: table;
+    width: 100%;
+    height: calc(100vh - 240px);
+}
+.norecordsfoundMain {
+    display: table-cell;
+    vertical-align: middle;
+}
+.norecordsfoundSub {
+    visibility: visible !important;
+    text-align: center;
+    color: #999;
+}
+
+
+.filterCheckBoxNew{
+    ion-checkbox{
+        position: absolute !important;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        left: 0;
+        z-index: 111;
+        .checkbox-icon{
+            float: right;
+            margin: 20px 0;
+            margin-right: -7px;
+            border-color: transparent;
+            background-color: transparent;
+        }
+    }
+    .checkbox-md .checkbox-checked .checkbox-inner{
+        border-color: $buttonprimary;
+    }
+    ion-item-sliding{
+        .item-checkbox-checked{
+                background: #ffffff;
+        }
+    }
+    ion-item.item-checkbox-checked{
+        .item-inner{
+            ion-label{
+                    .dateSec{
+                        background: $buttonprimary;
+                        p, span{
+                            color: #fff;
+                        }
+                    }
+                    .dateSecSub{
+                        p{
+                            color: #35A8DF;
+                        }
+                        h1, span{
+                            color: $buttonprimary;
+                        }
+                    }
+                }
+        }
+
+
+    }
+}
+.filterCheckBoxNewIos{
+    ion-checkbox{
+        position: absolute !important;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        left: 0;
+        z-index: 111;
+        .checkbox-icon{
+            float: right;
+            margin: 20px 0;
+            margin-right: -7px;
+            border-color: transparent;
+            background-color: transparent;
+        }
+    }
+    .checkbox-md .checkbox-checked .checkbox-inner {
+        border-color: $buttonprimary;
+    }
+    ion-item-sliding{
+        .item-checkbox-checked{
+                background: #ffffff;
+        }
+    }
+    ion-item.item-checkbox-checked{
+        .item-inner{
+            ion-label{
+                    .dateSec{
+                        background: $buttonprimary;
+                        p, span{
+                            color: #fff;
+                        }
+                    }
+                    .dateSecSub{
+                        p{
+                            color: #abace8;
+                        }
+                        h1, span{
+                            color: $buttonprimary;
+                        }
+                    }
+                }
+        }
+        ion-checkbox{
+            .checkbox-icon.checkbox-checked{
+                .checkbox-inner{
+                    border-color: $buttonprimary;
+                    border-width: 2px;
+                    border-top-width: 0;
+                    border-left-width: 0;
+                    border-style: solid;
+                }
+            }
+        }
+    }
+}
+
+.notificationstyle, .alert-sub-title{
+    margin: 15px 0 0 0 !important;
+    
+}
+
+.norecordsfound.loading{
+  text-align: center;
+  i{
+      font-size: 30px;
+  }
+}
+
+.input-cover{
+  position: static;
+}
+
+span.imgCladr {
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    background-position: center;
+}
+.flotingIcon{
+  font-size: 60px;
+}
+.flotBlack {
+  color: #000 !important;
+  span{
+    display:none;
+  }
+}
+
+
+.flotBlack{
+    color: #979797 !important;
+}
+
+
+.reportAlertClose{
+          position: absolute !important;
+    top: 107px;
+    right: 34px;
+    visibility: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.reportAlertClose:after {
+    content: "\f2c0";
+    visibility: visible;
+    display: inline-block;
+    font-family: "Ionicons";
+}
+.reportAlert .alert-input-group{
+      padding-bottom: 5px !important;
+}
+.popoverContnt .popover-content{
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.subpaddingSection1{
+  padding: 5px 0;
+}
+.subpaddingSection2{
+  padding: 5px 0;
+}
+.btnAlignmentReport{
+  width: 80px;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 12px;
+    height: 30px;
+}
+.moreIconAlign{
+      color: #000;
+    font-size: 30px;
+    padding: 13px 0px;
+}
+.externalImges{
+    width: 8%;
+    height: 8%;
+    border: 0;
+    margin-top: 12px;
+}
+
+
+/* 09-05-2018 changes */
+.alignItemPlus{
+  position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    padding: 10px 16px;
+}
+/* 09-05-2018 changes */
+
+
+@media(max-width:340px){
+    page-login .loginCarocel .loginCarocelImgs {
+        height: 59% !important;
+    }
+    page-login .loginCarocelImgsTxt2 {
+        height: 40px !important;
+    }
+    .norecordsfoundSections .noRecordImgSections.newChangesimgSections {
+        height: 110px !important;
+        margin-top: 10px !important;
+        margin-bottom: 0 !important;
+        width: 165px !important;
+    }
+    page-first-time-user-exp .loginCarocelImgsTxt {
+        bottom: 80px !important;
+        height: 125px !important;
+    }
+}
+
+.messagePopover{
+    position: absolute;
+    z-index: 111;
+    right: 8px;
+    top: 50px;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 20px;
+    span{
+        font-weight: 400;
+        display: block;
+    }
+    &:after{
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: -10px;
+        right: 9px;
+    }
+}
+.iosmessagePopover{
+  top: 62px;
+}
+.externalImges{
+    width: 27px;
+    height: 27px;
+}
+
+.firstTimeMatch{
+    position: absolute;
+    z-index: 111;
+    left: 86px;
+    top: 0;
+    width: auto;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-weight: 500;
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 20px;
+    span{
+        font-weight: 400;
+        display: block;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 22px;
+        left: -10px;
+        width: 0px;
+        height: 0px;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid rgba(0, 0, 0, 0.8);
+    }
+}

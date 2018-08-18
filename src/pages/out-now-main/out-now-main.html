@@ -1,0 +1,72 @@
+<!--
+  Generated template for the OutNowMainPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title class="dateinTitle">
+      <span class="headerCancelTxt" (click)="goBack()">Cancel</span>
+      <span class="alignMainHead2">Out Now</span>
+      <span class="headerDoneTxt" (click)="goToOutNow()">Done</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <h5 class="h5Heading"> Where are you out now? </h5>
+  <div class="calenderSection2">
+    <ion-row>
+      <ion-col col-2 (click)="getCurrentLocation(true)">
+        <ion-icon class="locationIcons" name="ios-pin-outline"></ion-icon>
+      </ion-col>
+      <ion-col col-10 class="secondSec" (click)="openModalLocation()">
+        <h1>{{city}}</h1>
+        <p>{{location}}</p>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </ion-col>
+    </ion-row>
+  </div>
+  <!-- <div class="calenderSection3">
+    <span class="outUnilsCls">Out until:</span>
+    <ion-item class="timeSections">
+      <ion-datetime displayFormat="hh:mm A" [(ngModel)]="myDate" (ionChange)="changeCheckOutStartTime()"></ion-datetime>
+    </ion-item>
+  </div> -->
+  <!-- <div class="addBtnClassDiv" *ngIf="isFrom !== 'FTUE'">
+    <button ion-button class="addBtnClass" (click)="goToOutNow()">
+      <ion-icon class="flotingIcon" ios="ios-arrow-round-forward" md="md-arrow-round-forward"></ion-icon>
+    </button>
+  </div> -->
+  <div class="alignInstagramdesign outNowFabs">
+    <ion-fab center bottom class="fabSection">
+      <button ion-fab color="danger" class="fabSectionSub" (click)="addOutNow()">
+        <span class="dIconInner dIconInnerMain dIconInnerMainPurpole">
+                    <span class="dIconInnerSub" style="background-image: url(assets/imgs/outNowIcon2.png); width: 32px; height: 37px; margin: 18px;"></span>
+        </span>
+      </button>
+    </ion-fab>
+  </div>
+</ion-content>
+<!--first time user exp-->
+<div [className]="firstTimeUserExp">
+  <div class="firstTimeUserExpSub">
+    <div class="firstTimeUserExpTop1 firstTimeUserExpTop4">
+      <div style="background-image: url(assets/imgs/outnowFtue1.png);" class="firstTimeUserExpTop1img4"></div>
+    </div>
+    <div class="firstTimeUserExpCorner firstTimeUserExpCorner1" style="background-image: url(assets/imgs/fiuiHomeSide2.png);"></div>
+    <div class="firstTimeUserExpCorner firstTimeUserExpCorner2" style="background-image: url(assets/imgs/fiuiHomeSide.png);"></div>
+    <div class="firstTimeUserExpCorner firstTimeUserExpCorner3" style="background-image: url(assets/imgs/fiuiHomeSide2.png);"></div>
+    <div class="firstTimeUserExpCorner firstTimeUserExpCorner4" style="background-image: url(assets/imgs/fiuiHomeSide.png);"></div>
+  </div>
+  <div class="alignInstagramdesign outNowFabs">
+    <ion-fab center bottom class="fabSection" (click)="firstTimeUserExpClick()">
+      <button ion-fab color="danger" class="fabSectionSub">
+        <span class="dIconInner dIconInnerMain dIconInnerMainPurpole">
+                    <span class="dIconInnerSub" style="background-image: url(assets/imgs/WoowooTics.png);width: 33px;height: 33px;margin: 18px;"></span>
+        </span>
+      </button>
+    </ion-fab>
+  </div>
+</div>
+<!--first time user exp-->

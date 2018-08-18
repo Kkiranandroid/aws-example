@@ -1,0 +1,121 @@
+page-editprofilephoto {
+    .gridMainSec{
+        font-size: 22px;
+        text-align: center;
+        color: $buttonprimary;
+        padding: 0 24px;
+        .icon1{
+            font-size: 35px;
+            margin-top: -4px;
+        }
+        .icon3{
+            font-size: 30px;
+            margin-top: -2px;
+        }
+        ion-icon, i{
+            height: 40px;
+        }
+    }
+    
+    
+    .msgMain{
+        padding: 0 8px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 0;
+        ion-scroll {
+            white-space: nowrap;
+            height: 80px;
+        }
+        .matchScroll{
+            display: inline-block;
+            text-align: center;
+            margin: 0 6px;
+            vertical-align: top;
+            span{
+                    width: 65px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    display: block;
+                        padding-top: 5px;
+                 }
+            &:first-child{
+                margin-left: 0;
+            }
+            &:last-child{
+                margin-right: 0;
+                padding-right: 16px;
+            }
+        }
+    }
+    .matchScrollImg1{
+        height: 80px;
+        width: 80px;
+        background-size: cover !important;
+        background-position: center !important;
+        border-radius: 20px;
+        margin: 0 auto;
+        border: 1px solid #E5E5E5;
+        object-fit: cover;
+        ion-icon{
+            line-height: 80px;
+            font-size: 30px;
+            color: $buttonprimary;
+            font-weight: 600;
+        }
+    }
+    .matchScroll{
+        position: relative;
+        .starFav{
+            position: absolute;
+            top: 0px;
+            right: -2px; 
+            color: #fff;
+            font-size: 12px;
+            background: $buttonprimary;
+            padding: 4px;
+            border-radius: 50%;
+        }
+    }
+    
+    
+    
+    .imgSections{
+        img{
+            width: calc(100% - 16px);
+            margin: auto; 
+            display: block;
+            height: calc(100vh - 230px);
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid #D9D9DD;
+        }
+        .matchScrollImg3{
+            border-radius: 16px;
+            height: calc(100vh - 230px);
+            margin: auto;
+            display: block;
+            border: 1px solid #D9D9DD;
+            background: #EFEFF4;
+            width: calc(100% - 16px);
+            text-align: center;
+            span{
+                background: #fff;
+                padding: 10px 20px;
+                border-radius: 10px;
+                color: $buttonprimary;
+                font-weight: 500;
+                font-size: 20px;
+                top: calc(50% - 22px);
+                position: relative;
+            }
+        }
+    }
+    .addedBorder{
+        border: 1px solid $buttonprimary;
+        padding: 2px;
+    }
+    
+    
+}

@@ -1,0 +1,51 @@
+fbphotoupload {
+    .rightAngleArrow{
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        top: calc(50% - 8px);
+        color: #999; 
+    }
+    .posRel{
+        position: relative;
+    }
+    ion-label{
+    h2{
+        font-size: 18px !important;
+    }
+    p{
+        font-size: 16px !important;
+    }
+}
+ion-avatar{
+    img{
+        width: 55px !important;
+        height: 55px !important;
+    }
+}
+.headerCancelTxt{
+        i{
+            font-size: 41px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -6px;
+            margin-left: -6px;
+            padding-right: 6px;
+        }
+    }
+}
+
+.norecordsfound1 {
+    display: table;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+.norecordsfoundMain1 {
+    display: table-cell;
+    vertical-align: middle;
+}
+.norecordsfoundSub1 {
+    visibility: visible !important;
+    text-align: center;
+    color: #999;
+}

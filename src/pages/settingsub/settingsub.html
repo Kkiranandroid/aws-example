@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title class="dateinTitle">
+      <span *ngIf="isEdit==true" class="headerCancelTxt" (click)="cancel()">Cancel</span>
+      <!-- <span class="alignMainHead padingTop0" (click)="goBack()"> -->
+        <!-- <i class="fa fa-user-circle  bluSelect" aria-hidden="true"></i> -->
+        <img class="externalImges" src="assets/icon/user/user_blue.png" (click)="goBack()">
+      <!-- </span> -->
+
+      <span *ngIf="isEdit==true" class="headerDoneTxt" (click)="updateUserDetails(false)">Done</span>
+       <span *ngIf="isEdit==false"  class="headerDoneTxt" (click)="goBack()">Back</span>
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list no-border class="profileMainSection">
+
+    <div class="firstDiv">
+      <ion-item class="bottomProfileSection demoClass">
+        <ion-label>Show me on WooWoo</ion-label>
+        <ion-toggle [(ngModel)]="profilevisible" checked="true" (ionChange)="profileVisible();"></ion-toggle>
+      </ion-item>
+      <div class="profileVisibleMsg">
+        <p>You won't be seen in the card feed but you can still message your matches</p>
+      </div> 
+      <ion-item class="bottomProfileSection">
+        <ion-label>Push notification</ion-label>
+        <ion-toggle [(ngModel)]="pushnotification" (ionChange)="notificationChange();"></ion-toggle>
+      </ion-item>
+      <ion-item class="bottomProfileSection">
+        <ion-label>Sounds</ion-label>
+        <ion-toggle [(ngModel)]="sound" (ionChange)="soundChange();"></ion-toggle>
+      </ion-item>
+    </div>
+
+      <div class="setingLabelTxt setingLabelTxt2">Age</div>
+    <div class="setingRangeTxt">Between <span>{{agerange.lower}}</span> and <span>{{set70PlusValue(agerange.upper)}}</span></div>
+    <ion-item class="bottomProfileSection">
+      <ion-range min="18" max="71" dualKnobs="true" pin="false" debounce="1000" [(ngModel)]="agerange" color="dark" class="rangeCng"(ionChange)="agechange($event)"></ion-range>
+    </ion-item>
+    <div class="setingLabelTxt setingLabelTxt2">Distance for Plan Now and Chat Now</div>
+    <div class="setingRangeTxt">Up to <span>{{distancerange}}</span> miles away</div>
+    <ion-item class="bottomProfileSection">
+      <ion-range pin="false" min="1" debounce="1000" [(ngModel)]="distancerange" color="dark" class="rangeCng" (ionChange)="distancechange($event)"></ion-range>
+    </ion-item>
+
+     <div class="setingLabelTxt setingLabelTxt2">Distance for Out Now</div>
+      <div class="setingRangeTxt">Up to <span>{{outNowdistancerange}}</span> miles away</div>
+    <ion-item class="bottomProfileSection">
+      <ion-range pin="false" min="1" debounce="1000" [(ngModel)]="outNowdistancerange" color="dark" class="rangeCng" (ionChange)="outNowdistancechange($event)"></ion-range>
+    </ion-item>
+
+    <div class="secondDiv">
+      <ion-item class="bottomProfileSection" (click)="openModalLink('FAQ')">
+          <ion-label>FAQ</ion-label>
+      </ion-item>
+      <ion-item class="bottomProfileSection" (click)="openModalLink('Feedback')">
+          <ion-label>Feedback</ion-label>
+      </ion-item>
+      <ion-item class="bottomProfileSection" (click)="openModalLink('Terms of Service')">
+          <ion-label>Terms of Service</ion-label>
+      </ion-item>
+      <ion-item class="bottomProfileSection" (click)="openModalLink('Privacy Policy')">
+          <ion-label>Privacy Policy</ion-label>
+      </ion-item>
+    </div>
+
+    <!-- <div class="multiButton" *ngIf="isFrom!=='loginPage'">
+      <button ion-button class="bluBtn" (click)="logoutAlert('logout');">Logout</button>
+      <button ion-button class="bluBtn" (click)="logoutAlert('delete');">Delete account</button>
+    </div> -->
+
+    <div class="secondDiv">
+      <ion-item class="bottomProfileSection logoutAndDelete" (click)="logoutAlert('logout')">
+          <ion-label>Logout</ion-label>
+      </ion-item>
+      <ion-item class="bottomProfileSection logoutAndDelete" (click)="logoutAlert('delete')">
+          <ion-label>Delete account</ion-label>
+      </ion-item>
+    </div>
+
+  </ion-list>
+</ion-content>
+<!-- <ion-footer class="remoreBorderBtm">
+  <ion-toolbar>
+    <div class="multiButton" *ngIf="isFrom!=='loginPage'">
+      <button ion-button class="bluBtn" (click)="logoutAlert('logout');">Logout</button>
+      <button ion-button class="bluBtn" (click)="logoutAlert('delete');">Delete account</button>
+    </div>
+  </ion-toolbar>
+</ion-footer> -->

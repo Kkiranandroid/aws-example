@@ -1,0 +1,24 @@
+fbtimeline {
+    .profileAddImgSec{
+        height: 80px;
+        width: 80px;
+        background-position: center !important;
+        background-size: cover !important;
+        margin: auto;
+        position: relative;
+    }
+    .imgFbGal{
+        float: left;
+        margin: 10px;
+    }
+    .headerCancelTxt{
+        i{
+            font-size: 41px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -6px;
+            margin-left: -6px;
+            padding-right: 6px;
+        }
+    }
+}
